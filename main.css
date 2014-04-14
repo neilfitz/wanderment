@@ -18,6 +18,7 @@ body {
 #map {
 	float:left;
 	width:100%;
+	min-width:500px;
 	height:100%;
 	position:relative;
 }
