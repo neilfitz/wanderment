@@ -100,3 +100,15 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# Templates for views 
+# TODO: Change to relative instead of absolute path
+TEMPLATE_DIRS = (
+#    os.path.join(BASE_DIR, 'templates')
+  '/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/templates/',
+)
+
+TEMPLATE_LOADERS = (
+  'django.template.loaders.filesystem.Loader',
+  'django.template.loaders.app_directories.Loader',
+)
