@@ -10,5 +10,5 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^about/', TemplateView.as_view(template_name="about.html")),
+    url(r'^sample_post/', TemplateView.as_view(template_name="sample_post.html")),
 )
