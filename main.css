@@ -1,0 +1,21 @@
+body {
+   margin: 0px;
+}
+
+#wrap {
+	width:100%;
+}
+
+#sidebar {
+	background-color:#3D0099;
+	float:left;
+	width:300px;
+	height:100%;
+}
+
+#map {
+	background-color: yellow;
+	float:left;
+	width:600px;
+	height:100%;
+}
