@@ -11,62 +11,6 @@ body {
 }
 
 
-/* SIDEBAR CSS*/
-#sidebar {
-	background-color:hsl(250,50%,80%);
-	float:left;
-	width:300px;
-	height:100%;
-	margin-left:-300px;
-	position:relative;
-	display:table;
-}
-#top-section{
-	height:80px;
-}
-#top-section div{
-	display: inline-block;
-}
-/* resize logo (fix later)*/
-#logo-img{
-	vertical-align: middle;
-	width:80px;
-	height:80px;
-}
-#search-field{
-	vertical-align: middle;
-	height: 40px;
-	width: 210px;
-	border:none;
-	margin-left:-1px;
-	border-radius: 7px;
-	padding: 0 10px;
-	font-size: 16pt;
-}
-#search-submit{
-	display:none;
-}
-#floater{
-	float:left; height:40%; margin-bottom:-200px; /*centering*/
-}
-#middle-section{
-	/*centering*/
-	height:400px;
-	clear:both;
-
-	width:260px;
-	padding: 0 20px;
-	text-align: center;
-	overflow: auto;
-	/*word-break: break-all;*/
-
-}
-
-
-#bottom-section{
-	position:absolute;
-	bottom:0px;
-}
 
 
 #map {
