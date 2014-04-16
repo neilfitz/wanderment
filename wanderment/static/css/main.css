@@ -22,3 +22,8 @@ body {
 	height:100%;
 	position:relative;
 }
+
+.popup {
+       min-width:400px;
+       min-height:200px;
+}
