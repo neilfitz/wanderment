@@ -24,13 +24,27 @@ body {
 }
 
 #sample_post {
-	background:yellow;
+	background:black;
 	z-index: 1; 
-	opacity: 0.5; 
+	opacity: 0.9; 
 	position: relative;
 	width: 100%;
 	height: 100%;
 	left: 2000px;
+	/* overflow: scroll; */
+}
+
+#sample_post_content{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background: yellow;
+} 
+
+.heading {
+	width: 100%;
+	height: 60px;
 }
 
 /* #Emerald Flat Button
