@@ -1,6 +1,7 @@
 body {
    margin:0px;
    font-family:Verdana;
+   overflow: auto;
 }
 
 #wrap {
@@ -75,3 +76,71 @@ body {
 	height:100%;
 	position:relative;
 }
+
+#sample_post {
+	background:black;
+	z-index: 1; 
+	opacity: 0.9; 
+	position: relative;
+	width: 100%;
+	height: 100%;
+	left: 2000px;
+	/* overflow: scroll; */
+}
+
+#sample_post_content{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background: yellow;
+} 
+
+.heading {
+	width: 100%;
+	height: 60px;
+}
+
+/* #Emerald Flat Button
+==================================================*/
+.emerald-flat-button {
+  position: relative;
+  vertical-align: top;
+  width: 70%;
+  height: 50px;
+  padding: 0;
+  font-size: 22px;
+  font-family: "Georgia", serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #2ecc71;
+  border: 0;
+  border-bottom: 2px solid #28be68;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #28be68;
+  box-shadow: inset 0 -2px #28be68;
+  /* TODO: Change these hard-coded margins */ 
+  margin-left: 45px;
+  margin-top: 45px;
+}
+
+.emerald-flat-button:hover {
+  background: #33BB6D; 
+}
+.emerald-flat-button:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.popup {
+       max-width:500px;
+       max-height:300px;
+}
+
+h2 {
+   text-align:center;
+}
+
