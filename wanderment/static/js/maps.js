@@ -20,10 +20,13 @@ function initialize() {
 	});
 
 	var popup = new google.maps.InfoWindow({
-		content:'<div class="popup"><h2>City Name Here</h2>Testing...1...2...3...testing...1...2...3...</div>'
+		content: 'Hi!'
 	});
 
 	google.maps.event.addListener(marker, 'click', function() {
+		var popupContent = '<div><h2>City Name Here</h2>' +
+		    '<img src="static/imgs/thumbnail.jpeg"/></div>';
+		popup.setContent(popupContent);
 		popup.open(map, marker);
 	});
 }

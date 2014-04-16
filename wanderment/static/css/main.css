@@ -24,6 +24,10 @@ body {
 }
 
 .popup {
-       min-width:400px;
-       min-height:200px;
+       max-width:500px;
+       max-height:300px;
+}
+
+h2 {
+   text-align:center;
 }
