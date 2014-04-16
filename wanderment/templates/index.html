@@ -6,12 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="/static/css/main.css" />
 	
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+	<script type="text/javascript" src="/static/js/jquery-1.11.0.js"></script>
 	<script type="text/javascript" src="/static/js/maps.js"></script>
+	<script type="text/javascript" src="/static/js/blur.js"></script>
 </head>
 <body>
-	<div id="wrap">
-		<div id="sidebar"></div >
+	<div id="wrap" class="wrapper">
+		<div id="sidebar">
+			<button class="emerald-flat-button" id="show_sample_post"> Sample Post</button>
+		</div>
 		<div id="map"></div>
+		<div id="sample_post" class="slider"></div>
 	</div>
 </body>
 </html>
