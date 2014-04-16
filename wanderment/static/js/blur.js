@@ -13,6 +13,7 @@ $(document).ready(function() {
 // Animate enter show post div 
 var showOrHide = true; 
 $( "#show_sample_post" ).click(function() {
+  console.log("click");
   if (showOrHide == true) {
       showOrHide = false; 
       $( "#sample_post" ).animate({

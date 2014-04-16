@@ -129,7 +129,7 @@ nav ul li a:hover {
   padding: 0px 20px;
   position: absolute;
   opacity: 1;
-  overflow: scroll;
+/*  overflow: scroll;*/
   padding-left: 230px;
   margin: 0 auto;
   text-align: left;
