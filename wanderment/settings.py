@@ -104,7 +104,7 @@ STATICFILES_DIRS = (
 # Templates for views 
 # TODO: Change to relative instead of absolute path
 TEMPLATE_DIRS = (
-#    os.path.join(BASE_DIR, 'templates')
+  os.path.join(BASE_DIR, 'templates'),
   '/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/templates/',
 )
 
