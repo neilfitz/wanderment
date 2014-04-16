@@ -67,3 +67,12 @@ body {
   box-shadow: none;
 }
 
+.popup {
+       max-width:500px;
+       max-height:300px;
+}
+
+h2 {
+   text-align:center;
+}
+
