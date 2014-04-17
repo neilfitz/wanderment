@@ -25,9 +25,11 @@ function initialize() {
 
 	google.maps.event.addListener(marker, 'click', function() {
 		var popupContent = '<div class="city_popup"><h2>Mumbai</h2>' +
-		    '<img src="http://www.goldentriangle-tour-india.com/blog/wp-content/uploads/2013/11/Mumbai_city.jpg" height="200" width="300"/></div>';
-		popup.setContent(popupContent);
+		    '<input type="image" id="show_sample_post" src="http://www.goldentriangle-tour-india.com/blog/wp-content/uploads/2013/11/Mumbai_city.jpg" height="200" width="300"/></div>';
+		popup.setContent(popupContent);		
 		popup.open(map, marker);
+
+		document.getElementById('show_sample_post').addEventListener('click', slide);
 	});
 }
 

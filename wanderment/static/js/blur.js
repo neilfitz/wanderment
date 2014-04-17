@@ -1,18 +1,7 @@
-$(document).ready(function() {
-
-// Blurring image-viewing
-(function() {
-  $(window).scroll(function() {
-    var oVal;
-    oVal = $(window).scrollTop() / 240;
-    return $(".blur").css("opacity", oVal);
-  });
-
-}).call(this);
-
 // Animate enter show post div 
 var showOrHide = true; 
-$( "#show_sample_post" ).click(function() {
+
+function slide() {
   console.log("click");
   if (showOrHide == true) {
       showOrHide = false; 
@@ -27,7 +16,20 @@ $( "#show_sample_post" ).click(function() {
       }, 500, function() {
     });
   }
-});
+};
+
+
+$(document).ready(function() {
+
+// Blurring image-viewing
+(function() {
+  $(window).scroll(function() {
+    var oVal;
+    oVal = $(window).scrollTop() / 240;
+    return $(".blur").css("opacity", oVal);
+  });
+
+}).call(this);
 
 }); 
 
