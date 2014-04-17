@@ -11,7 +11,7 @@ function slide() {
   } else {
     showOrHide = true; 
     $( "#sample_post" ).animate({
-        left: 2000,
+        left: 4000,
       }, 500, function() {
     });
   }
