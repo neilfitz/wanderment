@@ -43,6 +43,10 @@ function initialize() {
 		popup.setContent(popupContent);		
 		popup.open(map, marker);
 	});
+
+	google.maps.event.addListener(popup, 'closeclick', function() {
+		updateInfo(defaultInfo);
+	});
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
