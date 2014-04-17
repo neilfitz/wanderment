@@ -113,3 +113,8 @@ h2 {
    text-align:center;
 }
 
+.glow:hover{
+	border:2px;
+	border-color: rgb(180,70,255);
+	box-shadow: 0px 0px 20px rgb(180,70,255);
+}

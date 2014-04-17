@@ -35,6 +35,7 @@ function initialize() {
 		imagePost.setAttribute('src', 'http://www.goldentriangle-tour-india.com/blog/wp-content/uploads/2013/11/Mumbai_city.jpg');
 		imagePost.setAttribute('height', '200');
 		imagePost.setAttribute('width', '300');
+		imagePost.setAttribute('class', 'glow')
 		imagePost.addEventListener('click', slide);
 
 		popupContent.appendChild(cityName);
