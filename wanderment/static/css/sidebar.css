@@ -53,6 +53,7 @@
 	color: rgb(250,250,250);
 	font-size: 40px;
 	margin-bottom: .8em;
+	font-family: 'Dancing Script', serif;
 }
 #sidebar-info{
 	color:rgb(230,230,230);
@@ -74,6 +75,7 @@
 	text-align:left;
 	/*text-align:left;*/
 	font-family: 'EB Garamond', serif;
+	text-transform: uppercase;
 }
 .data-table td:first-child{
 	text-align: right;
