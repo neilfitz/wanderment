@@ -1,6 +1,6 @@
 var defaultInfo = Object();
 defaultInfo.heading = "Welcome to Wanderment!"
-defaultInfo.info = "<p>search a city or navigate the map to start wandering<p>"
+defaultInfo.info = "<p>search for a city or click around the map to start wandering<p>"
 	
 var sampleInfo = Object();
 sampleInfo.heading = "Mumbai";
