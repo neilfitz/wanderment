@@ -123,7 +123,7 @@ function initialize() {
 		popupContent.appendChild(imagePost);
 
 		popup.setContent(popupContent);		
-		popup.open(map, marker);
+		popup.open(map, marker2);
 	});
 
 	google.maps.event.addListener(marker3, 'click', function() {
@@ -148,7 +148,7 @@ function initialize() {
 		popupContent.appendChild(imagePost);
 
 		popup.setContent(popupContent);		
-		popup.open(map, marker);
+		popup.open(map, marker3);
 	});
 
 	google.maps.event.addListener(popup, 'closeclick', function() {
