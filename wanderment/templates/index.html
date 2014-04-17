@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="../static/js/maps.js"></script>
 	<script type="text/javascript" src="../static/js/blur.js"></script>
 	<script type="text/javascript" src="../static/js/sidebar.js"></script>
-
+	<script type="text/javascript" src="/static/js/editor/ckeditor.js"></script>
 </head>
 <body>
 	<div id="wrap" class="wrapper">
@@ -39,7 +39,11 @@
 			<div id="bottom-section">
 <!-- add post stuff here -->
 <!--				<button class="emerald-flat-button" id="show_sample_post"> Toggle Sample Post</button>-->
+
+			<button class="emerald-flat-button" id="show_sample_post"> Toggle Sample Post</button>
+			<button onclick="window.location.href='/editor'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px">Go To Editor</button>
 			</div>
+
 		</div>
 		<div id="map"></div>
 		<div id="sample_post" class="slider">
@@ -78,12 +82,28 @@
 				<div class='container'>
 
   				<div>
-					  The financial capital and most populous city in India, Mumbai is a diverse, vibrant, multi-cultural, modern city teeming with crowds. Situated on the west coast of India, Mumbai is the capital of the state of Maharashtra and home to 20 million people. <!-- Mumbai, along with the neighboring urban areas of Thane and Navi Mumbai, is one of the most heavily populated regions in Asia.
+					  The financial capital and most populous city in India, Mumbai is a diverse, vibrant, multi-cultural, modern city teeming with crowds. <!-- Situated on the west coast of India, Mumbai is the capital of the state of Maharashtra and home to 20 million people. Mumbai, along with the neighboring urban areas of Thane and Navi Mumbai, is one of the most heavily populated regions in Asia.
 					  Mumbai seems to be chaotic for travelers but the city moves at its own pace and there is a method to the madness of the city. Mumbai is also the entertainment capital of India. Scores of films are produced annually in Mumbai. Lured by its wealth, prosperity and the prospects of 'streets paved with gold', thousands of people migrate to Mumbai annually from interior regions of India. The city has welcomed and offered sanctuaries to people from different regions of the world and it is reflected in its cosmopolitan nature.
 					  <br>
 					  The city is replete with examples of contradiction. Luxury apartments stand adjacent to sprawling slums; the number of skyscrapers increases daily even as the largest slum in Asia, Dharavi continues to thrive. Cattle driven carts co-exist with luxury vehicles. -->
 					</div>
 				</div>
-	</div>
+		</div>
+
+		<!-- <div id="editor" class="slider">
+			<div id="editor_content">
+	    <form id="edit_form">
+	        <textarea name="editor1" id="editor1" rows="10" cols="80">
+	            This is my textarea to be replaced with CKEditor.
+	        </textarea>
+	        <script>
+	            // Replace the <textarea id="editor1"> with a CKEditor
+	            // instance, using default configuration.
+	            CKEDITOR.replace( 'editor1' );
+	        </script>
+	    </form>
+	    </div> 
+	  </div> -->
+
 </body>
 </html>

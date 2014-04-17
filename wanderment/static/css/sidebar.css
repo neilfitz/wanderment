@@ -54,16 +54,27 @@
 	font-size: 40px;
 	margin-bottom: .8em;
 }
-#sidebar-info p{
+#sidebar-info{
 	line-height: 1.4em;
 	font-size: 20px;
 	margin:0 0;
 }
 
-.data-list{
-	text-indent:-50px;
+.data-table{
+	line-height:1.2em;
+	font-size:20px;
+	font-family: Arial;
+	border-collapse: collapse;
+}
+.data-table td{
+	padding-top: .3em;
+	padding-bottom: .3em;
+	text-align:left;
 	/*text-align:left;*/
-	padding-left:50px;
+}
+.data-table td:first-child{
+	text-align: right;
+	width:100px;
 }
 
 #bottom-section{
