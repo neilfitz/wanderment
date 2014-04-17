@@ -7,7 +7,7 @@ sampleInfo.heading = "Mumbai";
 sampleDict = {"Country":"India","Population": "12,478,447", "Elevation": "14 m", "Type": "Big City", "Language": "Marathi, Hindi, English"};
 
 var userInfo = Object();
-unserInfo.heading = "Dora";
+userInfo.heading = "Dora";
 userInfo.info = "<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>";
 
 //data has a heading (string) and info section (html)
@@ -35,7 +35,7 @@ function makeLatLon(lat, lon){
 
 var locData = Object();
 locData.mumbai = makeLatLon(18.975,72.825833);
-// locData.boston = makeLatLon(42.3133,-71.0571);
+locData.boston = makeLatLon(42.3133,-71.0571);
 
 
 $(document).ready(function(){
