@@ -28,8 +28,12 @@ function initialize() {
 
 	//add a listener to map for search events
 	document.getElementById("map").addEventListener("searchMap", function(e) {
-		console.info("event is: ", e);
 		console.info("data is: ", e.detail);
+		//create lat lon
+		var loc = new google.maps.LatLng(e.detail.location.lat, e.detail.location.lon,false);
+		console.info("LatLng: ",loc);
+		map.panTo(loc);
+		google.maps.event.trigger(marker, 'click', {latLng: loc});
 	})
 
 	google.maps.event.addListener(marker, 'click', function() {
@@ -62,6 +66,7 @@ function initialize() {
 		updateInfo(defaultInfo);
 	});
 }
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 

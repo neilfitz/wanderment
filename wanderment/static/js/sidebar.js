@@ -22,12 +22,38 @@ function genTableInfo(dict){
 }
 sampleInfo.info = genTableInfo(sampleDict);
 
+function makeLatLon(lat, lon){
+	var latlon = Object(); 
+	latlon.lat = lat;
+	latlon.lon = lon;
+	return latlon;
+}
+
+var locData = Object();
+locData.mumbai = makeLatLon(18.975,72.825833);
+// locData.boston = makeLatLon(42.3133,-71.0571);
+
+
 $(document).ready(function(){
 	function searchMap(){
 		var searchTerm = $("#search-field").val();
-		//dummy function for now. Should find a location on the map
-		alert("searching for " + searchTerm);
-		// updateInfo(sampleInfo);
+		//fake database lookup for coordinates
+		if (locData.hasOwnProperty(searchTerm.toLowerCase())){
+			var loc = locData[searchTerm.toLowerCase()]
+
+			//create searchMap event to "map"
+			var searchEvent = new CustomEvent("searchMap", {
+				detail: {
+								location : loc
+								}
+				});
+			//dispatch event 
+			document.getElementById("map").dispatchEvent(searchEvent);
+			// updateInfo(sampleInfo);
+		}
+		else{
+			alert("Sorry, but " + searchTerm + " has no posts currently. How about Mumbai?");
+		}
 	}
 	//search bar stuff
 	$("#search-form").submit(
@@ -35,4 +61,11 @@ $(document).ready(function(){
 		searchMap();
 		return false;
 	});
+
+	// $("#search-field").autocomplete({
+	// 	source: Object.keys(locData),
+	// 	minLength: 0,
+	// 	_resizeMenu: function() { this.menu.element.outerWidth(200);},
+	// 	});
+
 })
