@@ -84,6 +84,56 @@ function initialize() {
 		popup.open(map, marker);
 	});
 
+	google.maps.event.addListener(marker2, 'click', function() {
+		updateInfo(bangkokInfo);
+
+		var popupContent = document.createElement('div');
+		popupContent.setAttribute('class', 'city_popup');
+		var cityName = document.createElement('h2');
+		cityName.innerHTML = 'Bangkok';
+		var imagePost = document.createElement('input');
+		imagePost.setAttribute('type', 'image');
+		imagePost.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
+		imagePost.setAttribute('height', '200');
+		imagePost.setAttribute('width', '300');
+		imagePost.setAttribute('class', 'glow')
+
+		imagePost.addEventListener('click', function() {
+			alert('Nothing here yet! Take a look at Mumbai.')
+		});
+
+		popupContent.appendChild(cityName);
+		popupContent.appendChild(imagePost);
+
+		popup.setContent(popupContent);		
+		popup.open(map, marker);
+	});
+
+	google.maps.event.addListener(marker3, 'click', function() {
+		updateInfo(dohaInfo);
+
+		var popupContent = document.createElement('div');
+		popupContent.setAttribute('class', 'city_popup');
+		var cityName = document.createElement('h2');
+		cityName.innerHTML = 'Doha';
+		var imagePost = document.createElement('input');
+		imagePost.setAttribute('type', 'image');
+		imagePost.setAttribute('src', 'http://collegiatemodelun.files.wordpress.com/2013/02/doha.jpg');
+		imagePost.setAttribute('height', '200');
+		imagePost.setAttribute('width', '300');
+		imagePost.setAttribute('class', 'glow')
+
+		imagePost.addEventListener('click', function() {
+			alert('Nothing here yet! Take a look at Mumbai.')
+		});
+
+		popupContent.appendChild(cityName);
+		popupContent.appendChild(imagePost);
+
+		popup.setContent(popupContent);		
+		popup.open(map, marker);
+	});
+
 	google.maps.event.addListener(popup, 'closeclick', function() {
 		updateInfo(defaultInfo);
 	});
