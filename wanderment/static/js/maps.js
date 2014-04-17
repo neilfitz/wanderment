@@ -13,6 +13,7 @@ function initialize() {
 		        path: google.maps.SymbolPath.CIRCLE,
 			scale: 5,
 			fillColor: "#3D0099",
+			fillOpacity: 1,
 			strokeColor: "#3D0099"
 		},
 		map: map,
