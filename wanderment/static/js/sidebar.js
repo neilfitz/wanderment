@@ -6,6 +6,10 @@ var sampleInfo = Object();
 sampleInfo.heading = "Mumbai";
 sampleDict = {"Country":"India","Population": "12,478,447", "Elevation": "14 m", "Type": "Big City", "Language": "Marathi, Hindi, English"};
 
+var userInfo = Object();
+unserInfo.heading = "Dora";
+userInfo.info = "<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>";
+
 //data has a heading (string) and info section (html)
 function updateInfo(data){
     $("#sidebar-heading").text(data.heading);
