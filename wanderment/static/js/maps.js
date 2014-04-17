@@ -26,6 +26,12 @@ function initialize() {
 		content: 'Hi!'
 	});
 
+	//add a listener to map for search events
+	document.getElementById("map").addEventListener("searchMap", function(e) {
+		console.info("event is: ", e);
+		console.info("data is: ", e.detail);
+	})
+
 	google.maps.event.addListener(marker, 'click', function() {
 		updateInfo(sampleInfo);
 
