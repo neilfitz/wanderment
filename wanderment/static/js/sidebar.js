@@ -1,3 +1,12 @@
+function genTableInfo(dict){
+	var html = '<table class="data-table">';
+	for (var key in dict){
+		html = html+'<tr><td>'+key+':</td><td>'+dict[key]+'</td></tr>';
+	}
+	html = html + '</table>';
+	return html;
+}
+
 var defaultInfo = Object();
 defaultInfo.heading = "Welcome to Wanderment!"
 defaultInfo.info = "<p>search for a city or click around the map to start wandering<p>"
@@ -5,6 +14,17 @@ defaultInfo.info = "<p>search for a city or click around the map to start wander
 var sampleInfo = Object();
 sampleInfo.heading = "Mumbai";
 sampleDict = {"Country":"India","Population": "12,478,447", "Elevation": "14 m", "Type": "Big City", "Language": "Marathi, Hindi, English"};
+sampleInfo.info = genTableInfo(sampleDict);
+
+var bangkokInfo = Object();
+bangkokInfo.heading = "Bangkok";
+bangkokDict = {"Country":"Thailand","Population": "8,280,925", "Elevation": "1.5 m", "Type": "Capital", "Language": "Thai"}
+bangkokInfo.info = genTableInfo(bangkokDict);
+
+var dohaInfo = Object();
+dohaInfo.heading = "Doha";
+dohaDict = {"Country":"Qatar","Population": "1,312,947", "Type": "City", "Language": "Arabic"}
+dohaInfo.info = genTableInfo(dohaDict);
 
 var userInfo = Object();
 userInfo.heading = "Dora";
@@ -16,16 +36,6 @@ function updateInfo(data){
     $("#sidebar-info").html(data.info);
 }
 
-function genTableInfo(dict){
-	var html = '<table class="data-table">';
-	for (var key in dict){
-		html = html+'<tr><td>'+key+':</td><td>'+dict[key]+'</td></tr>';
-	}
-	html = html + '</table>';
-	return html;
-}
-sampleInfo.info = genTableInfo(sampleDict);
-
 function makeLatLon(lat, lon){
 	var latlon = Object(); 
 	latlon.lat = lat;
@@ -36,7 +46,8 @@ function makeLatLon(lat, lon){
 var locData = Object();
 locData.mumbai = makeLatLon(18.975,72.825833);
 locData.boston = makeLatLon(42.3133,-71.0571);
-
+locData.doha = makeLatLon(25.28666,51.53333);
+locData.bangkok = makeLatLon(13.75,100.46666);
 
 $(document).ready(function(){
 	function searchMap(){
