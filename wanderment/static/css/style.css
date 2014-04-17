@@ -14,7 +14,8 @@ body {
   /* Page-wrap styles.  */
 }
 .article {
-  font-family: 'Liberation Serif';
+  /*font-family: 'Liberation Serif';*/
+  font-family: 'EB Garamond', serif;
 }
 
 * {
@@ -85,12 +86,15 @@ header > div a:hover {
 header p {
   font-size: 1.5em;
   margin-bottom: 0.7em;
-  font-family: Times New Roman;
+ /* font-family: Times New Roman;*/
+  font-family: 'EB Garamond', serif;
+  text-transform: uppercase;
 }
 h1 {
   font-weight: 800;
   font-size: 3.4em;
   margin-bottom: 0.2em;
+  font-family: 'Dancing Script', cursive;
 }
 nav {
   max-width: 600px;

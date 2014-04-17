@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="../static/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="../static/css/sidebar.css"/>
+	<link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
 
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<script type="text/javascript" src="../static/js/jquery-1.11.0.js"></script>
@@ -24,7 +25,7 @@
 				</div>
 				<div id="search-form-wrapper">
 					<form id="search-form"> 
-						<input id="search-field" class="ui-widget" type="text" name="search-field"  placeholder="Find a City" autocomplete="off">
+						<input id="search-field" type="text" name="search-field"  placeholder="Find a City..." autocomplete="off" style="font-family: 'EB Garamond', serif;">
 						<input id="search-submit" type="submit">
 					</form> 
 				</div>
@@ -34,7 +35,7 @@
 			<div id="middle-section">
 <!-- more info updates here -->
 				<h2 id="sidebar-heading">Welcome to Wanderment!</h2>
-				<div id="sidebar-info"><p>search a city or navigate the map to start wandering</p></div>
+				<div id="sidebar-info"><p>search for a city or click around the map to start wandering</p></div>
 			</div>
 
 			<div id="bottom-section">
@@ -64,7 +65,7 @@
 				    </p>
 				    <!--Home button disabled for now, seems redundant with back button-->
 				    <a href='/' title='Home' hidden>Home</a>
-				    <a href='#' onclick="updateInfo(defaultInfo); slide();" title='Back'>Back</a>
+				    <a href='#' onclick="updateInfo(defaultInfo); slide();" title='Back' style="font-family: 'EB Garamond', serif;">Back</a>
 				  </div>
 				  <nav role='navigation'>
 				    <ul>
