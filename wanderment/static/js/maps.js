@@ -11,8 +11,8 @@ function initialize() {
 		position: myLatlng,
 		icon: {
 		        path: google.maps.SymbolPath.CIRCLE,
-			scale: 5,
-			fillColor: "#3D0099",
+			scale: 6,
+			fillColor: "#FFFFFF",
 			fillOpacity: 1,
 			strokeColor: "#3D0099"
 		},
