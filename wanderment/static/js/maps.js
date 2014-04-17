@@ -24,6 +24,8 @@ function initialize() {
 	});
 
 	google.maps.event.addListener(marker, 'click', function() {
+		updateInfo(sampleInfo);
+
 		var popupContent = document.createElement('div');
 		popupContent.setAttribute('class', 'city_popup');
 		var cityName = document.createElement('h2');
