@@ -10,9 +10,6 @@ body {
 	min-width: 600px;
 }
 
-
-
-
 #map {
 	float:left;
 	width:100%;
@@ -79,9 +76,10 @@ body {
   box-shadow: none;
 }
 
-.popup {
-       max-width:500px;
-       max-height:300px;
+/* TODO: Make this less hack-y */
+.city_popup {
+       max-width:280px;
+       min-height:275px;
 }
 
 h2 {
