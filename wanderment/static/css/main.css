@@ -1,6 +1,7 @@
 body {
    margin:0px;
-   overflow: scroll;
+   font-family:Verdana;
+   overflow: auto;
 }
 
 #wrap {
@@ -15,6 +16,8 @@ body {
 	height:100%;
 	margin-left:-300px;
 	position:relative;
+	min-height:600px;
+	min-width: 600px;
 }
 
 #map {
@@ -101,9 +104,10 @@ body {
   box-shadow: none;
 }
 
-.popup {
-       max-width:500px;
-       max-height:300px;
+/* TODO: Make this less hack-y */
+.city_popup {
+       max-width:280px;
+       min-height:275px;
 }
 
 h2 {

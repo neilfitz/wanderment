@@ -1,21 +1,10 @@
-$(document).ready(function() {
-
-// Blurring image-viewing
-(function() {
-  $(window).scroll(function() {
-    var oVal;
-    oVal = $(window).scrollTop() / 240;
-    return $(".blur").css("opacity", oVal);
-  });
-
-}).call(this);
-
 // Animate enter show post div 
-var showOrHide_Post = true; 
-$( "#show_sample_post" ).click(function() {
-  console.log("click post");
-  if (showOrHide_Post == true) {
-      showOrHide_Post = false; 
+
+var showOrHide = true; 
+function slide() {
+  console.log("click");
+  if (showOrHide == true) {
+      showOrHide = false; 
       $( "#sample_post" ).animate({
         left: 0,
       }, 500, function() {
@@ -27,7 +16,20 @@ $( "#show_sample_post" ).click(function() {
       }, 500, function() {
     });
   }
-});
+};
+
+
+$(document).ready(function() {
+
+// Blurring image-viewing
+(function() {
+  $(window).scroll(function() {
+    var oVal;
+    oVal = $(window).scrollTop() / 240;
+    return $(".blur").css("opacity", oVal);
+  });
+
+}).call(this);
 
 // Animate enter show editor div
 // var showOrHide_Editor = true; 

@@ -24,10 +24,28 @@ function initialize() {
 	});
 
 	google.maps.event.addListener(marker, 'click', function() {
-		var popupContent = '<div class="city_popup"><h2>Mumbai</h2>' +
-		    '<img src="http://www.goldentriangle-tour-india.com/blog/wp-content/uploads/2013/11/Mumbai_city.jpg" height="200" width="300"/></div>';
-		popup.setContent(popupContent);
+		updateInfo(sampleInfo);
+
+		var popupContent = document.createElement('div');
+		popupContent.setAttribute('class', 'city_popup');
+		var cityName = document.createElement('h2');
+		cityName.innerHTML = 'Mumbai';
+		var imagePost = document.createElement('input');
+		imagePost.setAttribute('type', 'image');
+		imagePost.setAttribute('src', 'http://www.goldentriangle-tour-india.com/blog/wp-content/uploads/2013/11/Mumbai_city.jpg');
+		imagePost.setAttribute('height', '200');
+		imagePost.setAttribute('width', '300');
+		imagePost.addEventListener('click', slide);
+
+		popupContent.appendChild(cityName);
+		popupContent.appendChild(imagePost);
+
+		popup.setContent(popupContent);		
 		popup.open(map, marker);
+	});
+
+	google.maps.event.addListener(popup, 'closeclick', function() {
+		updateInfo(defaultInfo);
 	});
 }
 

@@ -3,13 +3,15 @@
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<title>Wanderment</title>
 	
-	<link rel="stylesheet" type="text/css" href="/static/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
-	
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../static/css/sidebar.css"/>
+
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-	<script type="text/javascript" src="/static/js/jquery-1.11.0.js"></script>
-	<script type="text/javascript" src="/static/js/maps.js"></script>
-	<script type="text/javascript" src="/static/js/blur.js"></script>
+	<script type="text/javascript" src="../static/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="../static/js/maps.js"></script>
+	<script type="text/javascript" src="../static/js/blur.js"></script>
+	<script type="text/javascript" src="../static/js/sidebar.js"></script>
 	<script type="text/javascript" src="/static/js/editor/ckeditor.js"></script>
 </head>
 <body>
@@ -17,6 +19,30 @@
 		<div id="sidebar">
 			<button class="emerald-flat-button" id="show_sample_post"> Toggle Sample Post</button>
 			<button onclick="window.location.href='/editor'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px">Go To Editor</button>
+			<div id="top-section">
+				<div id="logo-wrapper">
+					<img id="logo-img" src="../static/imgs/100x100_logo.png">
+				</div>
+				<div id="search-form-wrapper">
+					<form id="search-form"> 
+						<input id="search-field" type="text" name="search-field"  placeholder="Find a City" autocomplete="off">
+						<input id="search-submit" type="submit">
+					</form> 
+				</div>
+			</div>
+			<!-- float for pushing down middle to center -->
+			<div id="floater"></div>
+			<div id="middle-section">
+<!-- more info updates here -->
+				<h2 id="sidebar-heading">Welcome to Wanderment!</h2>
+				<div id="sidebar-info"><p>search a city or navigate the map to start wandering</p></div>
+			</div>
+
+			<div id="bottom-section">
+<!-- add post stuff here -->
+<!--				<button class="emerald-flat-button" id="show_sample_post"> Toggle Sample Post</button>-->
+			</div>
+>>>>>>> 297a7fed4bdecc708a21a81d80c71356b31c0f92
 		</div>
 		<div id="map"></div>
 		<div id="sample_post" class="slider">
@@ -35,7 +61,7 @@
 				    <p>
 				      The city of dreams
 				    </p>
-				    <a href='http://wanderment.herokuapp.com/' title='Home'>Home</a>
+				    <a href='/' onclick="slide" title='Home'>Home</a>
 				  </div>
 				  <nav role='navigation'>
 				    <ul>

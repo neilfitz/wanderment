@@ -1,0 +1,71 @@
+/* SIDEBAR CSS*/
+#sidebar {
+	background-color:hsl(250,50%,80%);
+	float:left;
+	width:300px;
+	height:100%;
+	margin-left:-300px;
+	position:relative;
+	display:table;
+}
+#top-section{
+	height:80px;
+}
+#top-section div{
+	display: inline-block;
+}
+/* resize logo (fix later)*/
+#logo-img{
+	vertical-align: middle;
+	width:80px;
+	height:80px;
+}
+#search-field{
+	vertical-align: middle;
+	height: 40px;
+	width: 210px;
+	border:none;
+	margin-left:-1px;
+	border-radius: 7px;
+	padding: 0 10px;
+	font-size: 16pt;
+}
+#search-submit{
+	display:none;
+}
+#floater{
+	float:left; height:40%; margin-bottom:-200px; /*centering*/
+}
+#middle-section{
+	/*centering*/
+	height:400px;
+	clear:both;
+
+	width:300px;
+	padding: 0 20px;
+	margin:0;
+	text-align: center;
+	overflow: auto;
+	/*word-break: break-all;*/
+}
+#sidebar-heading{
+	color: rgb(50,50,50);
+	font-size: 40px;
+	margin-bottom: .8em;
+}
+#sidebar-info p{
+	line-height: 1.4em;
+	font-size: 20px;
+	margin:0 0;
+}
+
+.data-list{
+	text-indent:-50px;
+	/*text-align:left;*/
+	padding-left:50px;
+}
+
+#bottom-section{
+	position:absolute;
+	bottom:20px;
+}
