@@ -18,15 +18,18 @@
 /* resize logo (fix later)*/
 #logo-img{
 	vertical-align: middle;
-	width:80px;
-	height:80px;
+	width:40px;
+	height:40px;
+	margin-top:15px;
+	margin-left:15px;
 }
 #search-field{
 	vertical-align: middle;
 	height: 40px;
 	width: 210px;
 	border:none;
-	margin-left:-1px;
+	margin-top:15px;
+	margin-left:10px;
 	padding: 0 10px;
 	font-size: 16pt;
 }

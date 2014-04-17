@@ -19,7 +19,33 @@ function initialize() {
 			strokeColor: "#3D0099"
 		},
 		map: map,
-		title:"Hello World!"
+		title:"Mumbai"
+	});
+
+	var marker2 = new google.maps.Marker({
+		position: new google.maps.LatLng(13.7500, 100.4667),
+		icon: {
+		        path: google.maps.SymbolPath.CIRCLE,
+			scale: 6,
+			fillColor: "#FFFFFF",
+			fillOpacity: 1,
+			strokeColor: "#3D0099"
+		},
+		map: map,
+		title:"Bangkok"
+	});
+
+	var marker3 = new google.maps.Marker({
+		position: new google.maps.LatLng(25.2867, 51.5333),
+		icon: {
+		        path: google.maps.SymbolPath.CIRCLE,
+			scale: 6,
+			fillColor: "#FFFFFF",
+			fillOpacity: 1,
+			strokeColor: "#3D0099"
+		},
+		map: map,
+		title:"Doha"
 	});
 
 	var popup = new google.maps.InfoWindow({
