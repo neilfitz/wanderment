@@ -73,6 +73,7 @@
 	padding-bottom: .3em;
 	text-align:left;
 	/*text-align:left;*/
+	font-family: 'EB Garamond', serif;
 }
 .data-table td:first-child{
 	text-align: right;
