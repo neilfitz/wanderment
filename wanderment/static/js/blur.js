@@ -2,7 +2,6 @@
 
 var showOrHide = true; 
 function slide() {
-  console.log("click");
   if (showOrHide == true) {
       showOrHide = false; 
       $( "#sample_post" ).animate({
@@ -10,7 +9,7 @@ function slide() {
       }, 500, function() {
     });
   } else {
-    showOrHide_Post = true; 
+    showOrHide = true; 
     $( "#sample_post" ).animate({
         left: 2000,
       }, 500, function() {
