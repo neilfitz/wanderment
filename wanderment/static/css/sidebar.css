@@ -34,11 +34,12 @@
 	display:none;
 }
 #floater{
-	float:left; height:40%; margin-bottom:-200px; /*centering*/
+	float:left; height:40%; min-height:300px; margin-bottom:-300px; /*centering*/
 }
 #middle-section{
 	/*centering*/
-	height:400px;
+	min-height:400px;
+	height: 60%;
 	clear:both;
 
 	width:300px;
