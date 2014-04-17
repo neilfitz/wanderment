@@ -53,8 +53,16 @@
 	font-size: 40px;
 	margin-bottom: .8em;
 }
-#sidebar-info{
+#sidebar-info p{
+	line-height: 1.4em;
 	font-size: 20px;
+	margin:0 0;
+}
+
+.data-list{
+	text-indent:-50px;
+	/*text-align:left;*/
+	padding-left:50px;
 }
 
 #bottom-section{
