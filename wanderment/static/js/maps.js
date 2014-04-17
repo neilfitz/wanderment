@@ -52,36 +52,53 @@ function initialize() {
 		content: 'Hi!'
 	});
 
+	//range is a positive value
+	function makeBounds(loc, range){
+		var sw = new google.maps.LatLng(loc.lat()-range,loc.lng()-range);
+		var ne = new google.maps.LatLng(loc.lat()+range,loc.lng()+range);
+		return new google.maps.LatLngBounds(sw, ne);
+	}
+
 	//add a listener to map for search events
 	document.getElementById("map").addEventListener("searchMap", function(e) {
-		console.info("event is: ", e);
 		console.info("data is: ", e.detail);
+		//create lat lon
+		var loc = new google.maps.LatLng(e.detail.location.lat, e.detail.location.lon,false);
+		console.info("LatLng: ",loc);
+		map.panTo(loc);
+		google.maps.event.trigger(marker, 'click', {latLng: loc});
 	})
 
-	google.maps.event.addListener(marker, 'click', function() {
-		updateInfo(sampleInfo);
+	google.maps.event.addListener(marker, 'click', function(e) {
+		//make a bounds for clicking
+		var bounds = makeBounds(marker.position, 0.2);
+		//if in range of marker, zoom over
+		if(bounds.contains(e.latLng)){
+			updateInfo(sampleInfo);
 
-		var popupContent = document.createElement('div');
-		popupContent.setAttribute('class', 'city_popup');
-		var cityName = document.createElement('h2');
-		cityName.innerHTML = 'Mumbai';
-		var imagePost = document.createElement('input');
-		imagePost.setAttribute('type', 'image');
-		imagePost.setAttribute('src', 'http://www.goldentriangle-tour-india.com/blog/wp-content/uploads/2013/11/Mumbai_city.jpg');
-		imagePost.setAttribute('height', '200');
-		imagePost.setAttribute('width', '300');
-		imagePost.setAttribute('class', 'glow')
+			var popupContent = document.createElement('div');
+			popupContent.setAttribute('class', 'city_popup');
+			var cityName = document.createElement('h2');
+			cityName.innerHTML = 'Mumbai';
+			var imagePost = document.createElement('input');
+			imagePost.setAttribute('type', 'image');
+			imagePost.setAttribute('src', 'http://www.goldentriangle-tour-india.com/blog/wp-content/uploads/2013/11/Mumbai_city.jpg');
+			imagePost.setAttribute('height', '200');
+			imagePost.setAttribute('width', '300');
+			imagePost.setAttribute('class', 'glow')
 
-		imagePost.addEventListener('click', function() {
-			popup.close();
-			slide();
-		});
+			imagePost.addEventListener('click', function() {
+				popup.close();
+				slide();
+			});
 
-		popupContent.appendChild(cityName);
-		popupContent.appendChild(imagePost);
+			popupContent.appendChild(cityName);
+			popupContent.appendChild(imagePost);
 
-		popup.setContent(popupContent);		
-		popup.open(map, marker);
+			popup.setContent(popupContent);		
+			popup.open(map, marker);	
+		}
+		
 	});
 
 	google.maps.event.addListener(marker2, 'click', function() {
@@ -138,6 +155,7 @@ function initialize() {
 		updateInfo(defaultInfo);
 	});
 }
+
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
