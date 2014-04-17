@@ -13,6 +13,9 @@ body {
   font-size: 1.4em;
   /* Page-wrap styles.  */
 }
+.article {
+  font-family: 'Liberation Serif';
+}
 
 * {
   -webkit-box-sizing: border-box;
