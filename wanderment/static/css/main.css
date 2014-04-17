@@ -16,8 +16,8 @@ body {
 	height:100%;
 	margin-left:-300px;
 	position:relative;
-	min-height:600px;
-	min-width: 600px;
+/*	min-height:600px;
+	min-width: 600px;*/
 }
 
 #map {
