@@ -19,7 +19,7 @@
 		<div id="sidebar">
 			<div id="top-section">
 				<div id="logo-wrapper">
-					<img id="logo-img" src="../static/imgs/100x100_logo.png">
+					<a href="/"><img id="logo-img" src="../static/imgs/100x100_logo.png"/></a>
 				</div>
 				<div id="search-form-wrapper">
 					<form id="search-form"> 
@@ -40,8 +40,7 @@
 <!-- add post stuff here -->
 <!--				<button class="emerald-flat-button" id="show_sample_post"> Toggle Sample Post</button>-->
 
-			<button class="emerald-flat-button" id="show_sample_post"> Toggle Sample Post</button>
-			<button onclick="window.location.href='/editor'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px">Go To Editor</button>
+			<button onclick="window.location.href='/editor'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px; min-width:200px">Go To Editor</button>
 			</div>
 
 		</div>
@@ -64,7 +63,7 @@
 				    </p>
 				    <!--Home button disabled for now, seems redundant with back button-->
 				    <a href='/' title='Home' hidden>Home</a>
-				    <a href='#' onclick="slide();" title='Back'>Back</a>
+				    <a href='#' onclick="updateInfo(defaultInfo); slide();" title='Back'>Back</a>
 				  </div>
 				  <nav role='navigation'>
 				    <ul>
@@ -83,7 +82,7 @@
 
 				<div class='container'>
 
-  				<div>
+  				<div class='article'>
 					  The financial capital and most populous city in India, Mumbai is a diverse, vibrant, multi-cultural, modern city teeming with crowds. <!-- Situated on the west coast of India, Mumbai is the capital of the state of Maharashtra and home to 20 million people. Mumbai, along with the neighboring urban areas of Thane and Navi Mumbai, is one of the most heavily populated regions in Asia.
 					  Mumbai seems to be chaotic for travelers but the city moves at its own pace and there is a method to the madness of the city. Mumbai is also the entertainment capital of India. Scores of films are produced annually in Mumbai. Lured by its wealth, prosperity and the prospects of 'streets paved with gold', thousands of people migrate to Mumbai annually from interior regions of India. The city has welcomed and offered sanctuaries to people from different regions of the world and it is reflected in its cosmopolitan nature.
 					  <br>

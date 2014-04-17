@@ -2,7 +2,9 @@ function initialize() {
 	var myLatlng = new google.maps.LatLng(18.9750, 72.8258);
 	var mapOptions = {
 	        zoom: 4,
-		center: myLatlng
+		center: myLatlng,
+		mapTypeControl: false,
+		streetViewControl: false
 	}
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	
@@ -11,8 +13,9 @@ function initialize() {
 		position: myLatlng,
 		icon: {
 		        path: google.maps.SymbolPath.CIRCLE,
-			scale: 5,
-			fillColor: "#3D0099",
+			scale: 6,
+			fillColor: "#FFFFFF",
+			fillOpacity: 1,
 			strokeColor: "#3D0099"
 		},
 		map: map,
@@ -42,7 +45,11 @@ function initialize() {
 		imagePost.setAttribute('height', '200');
 		imagePost.setAttribute('width', '300');
 		imagePost.setAttribute('class', 'glow')
-		imagePost.addEventListener('click', slide);
+
+		imagePost.addEventListener('click', function() {
+			popup.close();
+			slide();
+		});
 
 		popupContent.appendChild(cityName);
 		popupContent.appendChild(imagePost);
