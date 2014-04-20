@@ -67,6 +67,10 @@ function initialize() {
 		console.info("LatLng: ",loc);
 		map.panTo(loc);
 		google.maps.event.trigger(marker, 'click', {latLng: loc});
+
+		google.maps.event.trigger(marker2, 'click', {latLng: loc});
+
+		google.maps.event.trigger(marker3, 'click', {latLng: loc});
 	})
 
 	google.maps.event.addListener(marker, 'click', function(e) {
@@ -101,54 +105,66 @@ function initialize() {
 		
 	});
 
-	google.maps.event.addListener(marker2, 'click', function() {
-		updateInfo(bangkokInfo);
+	google.maps.event.addListener(marker2, 'click', function(e) {
+		//make a bounds for clicking
+		var bounds = makeBounds(marker2.position, 0.2);
+		//if in range of marker, zoom over
+		if(bounds.contains(e.latLng)){
+		
+			updateInfo(bangkokInfo);
 
-		var popupContent = document.createElement('div');
-		popupContent.setAttribute('class', 'city_popup');
-		var cityName = document.createElement('h2');
-		cityName.innerHTML = 'Bangkok';
-		var imagePost = document.createElement('input');
-		imagePost.setAttribute('type', 'image');
-		imagePost.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
-		imagePost.setAttribute('height', '200');
-		imagePost.setAttribute('width', '300');
-		imagePost.setAttribute('class', 'glow')
+			var popupContent = document.createElement('div');
+			popupContent.setAttribute('class', 'city_popup');
+			var cityName = document.createElement('h2');
+			cityName.innerHTML = 'Bangkok';
+			var imagePost = document.createElement('input');
+			imagePost.setAttribute('type', 'image');
+			imagePost.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
+			imagePost.setAttribute('height', '200');
+			imagePost.setAttribute('width', '300');
+			imagePost.setAttribute('class', 'glow')
 
-		imagePost.addEventListener('click', function() {
-			alert('Nothing here yet! Take a look at Mumbai.')
-		});
+			imagePost.addEventListener('click', function() {
+				alert('Nothing here yet! Take a look at Mumbai.')
+			});
 
-		popupContent.appendChild(cityName);
-		popupContent.appendChild(imagePost);
+			popupContent.appendChild(cityName);
+			popupContent.appendChild(imagePost);
 
-		popup.setContent(popupContent);		
-		popup.open(map, marker2);
+			popup.setContent(popupContent);		
+			popup.open(map, marker2);
+		}
 	});
 
-	google.maps.event.addListener(marker3, 'click', function() {
-		updateInfo(dohaInfo);
+	google.maps.event.addListener(marker3, 'click', function(e) {
+		//make a bounds for clicking
+		var bounds = makeBounds(marker3.position, 0.2);
+		//if in range of marker, zoom over
+		if(bounds.contains(e.latLng)){
+			
+			updateInfo(dohaInfo);
 
-		var popupContent = document.createElement('div');
-		popupContent.setAttribute('class', 'city_popup');
-		var cityName = document.createElement('h2');
-		cityName.innerHTML = 'Doha';
-		var imagePost = document.createElement('input');
-		imagePost.setAttribute('type', 'image');
-		imagePost.setAttribute('src', 'http://collegiatemodelun.files.wordpress.com/2013/02/doha.jpg');
-		imagePost.setAttribute('height', '200');
-		imagePost.setAttribute('width', '300');
-		imagePost.setAttribute('class', 'glow')
+			var popupContent = document.createElement('div');
+			popupContent.setAttribute('class', 'city_popup');
+			var cityName = document.createElement('h2');
+			cityName.innerHTML = 'Doha';
+			var imagePost = document.createElement('input');
+			imagePost.setAttribute('type', 'image');
+			imagePost.setAttribute('src', 'http://collegiatemodelun.files.wordpress.com/2013/02/doha.jpg');
+			imagePost.setAttribute('height', '200');
+			imagePost.setAttribute('width', '300');
+			imagePost.setAttribute('class', 'glow')
 
-		imagePost.addEventListener('click', function() {
-			alert('Nothing here yet! Take a look at Mumbai.')
-		});
+			imagePost.addEventListener('click', function() {
+				alert('Nothing here yet! Take a look at Mumbai.')
+			});
 
-		popupContent.appendChild(cityName);
-		popupContent.appendChild(imagePost);
+			popupContent.appendChild(cityName);
+			popupContent.appendChild(imagePost);
 
-		popup.setContent(popupContent);		
-		popup.open(map, marker3);
+			popup.setContent(popupContent);		
+			popup.open(map, marker3);
+		}
 	});
 
 	google.maps.event.addListener(popup, 'closeclick', function() {
