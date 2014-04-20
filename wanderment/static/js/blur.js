@@ -1,5 +1,9 @@
-// Animate enter show post div 
+function remove(id)
+{
+    return (elem=document.getElementById(id)).parentNode.removeChild(elem);
+}
 
+// Animate enter show post div 
 var showOrHide = true; 
 function slide() {
   if (showOrHide == true) {
@@ -7,12 +11,22 @@ function slide() {
       $( "#sample_post" ).animate({
         left: 0,
       }, 500, function() {
+        url = '../static/sounds/rain-02.mp3'
+        rain=document.createElement("embed");
+        rain.setAttribute("loop","true");
+        rain.setAttribute("hidden","true");
+        rain.setAttribute("autostart","true");
+        rain.setAttribute("src",url);
+        rain.setAttribute("id","rain");
+        rain.setAttribute("enablejavascript","true");
+        document.body.appendChild(rain);
     });
   } else {
     showOrHide = true; 
     $( "#sample_post" ).animate({
         left: 4000,
       }, 500, function() {
+        remove("rain"); 
     });
   }
 };
