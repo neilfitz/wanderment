@@ -15,7 +15,7 @@ class CSVListField(models.TextField):
 		return value.split(',')
 
 	#send list or tuple to csv to unicode string
-	def get_db_prep_value(self, value):
+	def get_prep_value(self, value):
 		if not value: return
 		assert(isinstance(value, list) or isinstance(value, tuple))
 		return ','.join([unicode(s) for s in value])
@@ -33,10 +33,18 @@ class City(models.Model):
 	latitude = models.DecimalField(max_digits=9, decimal_places=6)
 	longitude = models.DecimalField(max_digits=9, decimal_places=6)
 
+	def __unicode__(self):
+		return self.name
+
 class Post(models.Model):
 	city = models.ForeignKey(City)
 	user = models.ForeignKey(User)
+	title = models.CharField(max_length=140)
+	subTitle = models.CharField(max_length=140)
 	text = models.TextField()
 	imgURLs = CSVListField()
 	soundURL = models.URLField(max_length=200)
+
+	def __unicode__(self):
+		return self.title 
 
