@@ -4,6 +4,12 @@ from django.template import RequestContext, loader
 
 from models import Post, City
 
+# From http://stackoverflow.com/questions/11811256/how-to-set-content-type-of-javascript-files-in-django 
+def java_script(request):
+    filename = request.path.strip("/")
+    data = open(filename, "rb").read()
+    return HttpResponse(data, mimetype="application/x-javascript")
+
 def index(request):
   return HttpResponse("Hello, world. You're at the posts index.")
 

@@ -15,7 +15,7 @@ class CSVListField(models.TextField):
 		return value.split(',')
 
 	#send list or tuple to csv to unicode string
-	def get_prep_value(self, value):
+	def get_db_prep_value(self, value):
 		if not value: return
 		assert(isinstance(value, list) or isinstance(value, tuple))
 		return ','.join([unicode(s) for s in value])
@@ -44,6 +44,10 @@ class Post(models.Model):
 	text = models.TextField()
 	imgURLs = CSVListField()
 	soundURL = models.URLField(max_length=200)
+
+	# The first image is the title image
+	def getTitleImage(self):
+		return str(self.imgURLs.split(',')[0])
 
 	def __unicode__(self):
 		return self.title 

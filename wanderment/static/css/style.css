@@ -18,6 +18,15 @@ header h1 {
   font-family: 'Dancing Script', sans-serif;
 }
 
+header h2 {
+  font-family: 'EB Garamond', serif;
+  text-transform: uppercase; 
+}
+
+.white, .white a {
+  color: #fff;
+}
+
 .article {
   /*font-family: 'Liberation Serif';*/
   font-family: 'EB Garamond', serif;
@@ -49,6 +58,19 @@ a {
   background-size: cover;
   background-position: center center;
 }
+
+/* For gradients over the title images */  
+.blurImg > div:before {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 100%);
+}
+
 .blur {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -64,7 +86,7 @@ header {
 header > div {
   max-width: 600px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 75px;
   height: 380px;
   text-align: center;
   color: White;
@@ -92,8 +114,9 @@ header p {
   font-size: 1.5em;
   margin-bottom: 0.7em;
  /* font-family: Times New Roman;*/
-  font-family: 'EB Garamond', serif;
-  text-transform: uppercase;
+  font-family: 'Dancing Script', serif;
+  text-transform: lowercase;
+  font-style: italic;
 }
 h1 {
   font-weight: 800;
