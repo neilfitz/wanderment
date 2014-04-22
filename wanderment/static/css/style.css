@@ -59,18 +59,6 @@ a {
   background-position: center center;
 }
 
-/* For gradients over the title images */  
-.blurImg > div:before {
-    content: " ";
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    background: -webkit-radial-gradient(top center, ellipse cover, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.5) 100%);
-}
-
 .blur {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
