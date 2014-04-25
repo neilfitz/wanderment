@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect 
+from django.shortcuts import render, redirect, render_to_response
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.utils import timezone
@@ -24,18 +24,29 @@ def detail(request, post_id):
     })
   return HttpResponse(template.render(context))
 
-def add_model(request):
-    if request.method == "POST":
-        form = PostForm(request.POST)
-        if form.is_valid():
+def create_post(request):
+    # Get the context from the request.
+    context = RequestContext(request)
 
-            # commit=False means the form doesn't save at this time.
-            # commit defaults to True which means it normally saves.
-            model_instance = form.save(commit=False)
-            model_instance.timestamp = timezone.now()
-            model_instance.save()
-            return redirect('victory')
+    # A HTTP POST?
+    if request.method == 'POST':
+        form = PostForm(request.POST)
+
+        # Have we been provided with a valid form?
+        if form.is_valid():
+            # Save the new category to the database.
+            form.save(commit=True)
+
+            # Now call the index() view.
+            # The user will be shown the homepage.
+            return index(request)
+        else:
+            # The supplied form contained errors - just print them to the terminal.
+            print form.errors
     else:
+        # If the request was not a POST, display the form to enter details.
         form = PostForm()
 
-    return render(request, "create_post.html", {'form': form})
+    # Bad form (or form details), no form supplied...
+    # Render the form with error messages (if any).
+    return render_to_response('posts/create_post.html', {'form': form}, context)
