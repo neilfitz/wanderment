@@ -139,19 +139,50 @@ function initialize() {
 			popupContent.setAttribute('class', 'city_popup');
 			var cityName = document.createElement('h2');
 			cityName.innerHTML = 'Bangkok';
+			
 			var imagePost = document.createElement('input');
 			imagePost.setAttribute('type', 'image');
 			imagePost.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
 			imagePost.setAttribute('height', '200');
 			imagePost.setAttribute('width', '300');
-			imagePost.setAttribute('class', 'glow')
+			imagePost.setAttribute('class', 'glow');
+			/*var imagePost2 = document.createElement('input2');
+			imagePost2.setAttribute('type', 'image2');
+			imagePost2.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
+			imagePost2.setAttribute('height', '50');
+			imagePost2.setAttribute('width', '75');
+			imagePost2.setAttribute('class', 'glow2');
+			var imagePost3 = document.createElement('input3');
+			imagePost3.setAttribute('type', 'image3');
+			imagePost3.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
+			imagePost3.setAttribute('height', '50');
+			imagePost3.setAttribute('width', '75');
+			imagePost3.setAttribute('class', 'glow3');
+			var imagePost4 = document.createElement('input4');
+			imagePost4.setAttribute('type', 'image4');
+			imagePost4.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
+			imagePost4.setAttribute('height', '50');
+			imagePost4.setAttribute('width', '75');
+			imagePost4.setAttribute('class', 'glow4');
+			
+			var seeMore = document.createElement('button');
+			seeMore.setAttribute('type', 'image5');
+			seeMore.setAttribute('src', '../imgs/view_more_posts.png');
+			seeMore.setAttribute('height', '380');
+			seeMore.setAttribute('width', '3000');
+			seeMore.setAttribute('class', 'glow5');*/
 
 			imagePost.addEventListener('click', function() {
 				alert('Nothing here yet! Take a look at Mumbai.')
 			});
+			//seeMore.addEventListener('click', function() { alert('No more posts!') });
 
 			popupContent.appendChild(cityName);
 			popupContent.appendChild(imagePost);
+			/*popupContent.appendChild(imagePost2);
+			popupContent.appendChild(imagePost3);
+			popupContent.appendChild(imagePost4);
+			popupContent.appendChild(seeMore);*/
 
 			popup.setContent(popupContent);		
 			popup.open(map, marker2);
