@@ -1,0 +1,60 @@
+<!-- {% if p%}
+  <h1> {{p.title}} </h1>
+  <h2> {{p.subTitle}} </h2>
+  <p> {{p.text}} </p>
+{% else %}
+  <p>Sorry, no post here</p>
+{% endif %} -->
+
+<html>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/post.css" />
+<link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/static/js/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="/static/js/blur.js"></script>
+<div class='blurImg'>
+  <!--   <div style="background-image: url('https://d262ilb51hltx0.cloudfront.net/fit/c/1600/1280/gradv/29/81/60/darken/25/1*4ncz3hLxmL8E_bUh-0z62w.jpeg')"></div> -->
+  <div style="background-image: url('{{ p.getTitleImage }}')"></div>
+<!-- <div style="background-image: url('http://www.holidaylist2014.com/wp-content/uploads/2014/03/mumbai_holidays2014.jpg')"></div>
+ -->  <!--  <div style="background-image: url('http://upload.wikimedia.org/wikipedia/commons/0/09/Mumbai_Train_Station.jpg')"></div> -->
+  <div class='blur' style="background-image: url('https://d262ilb51hltx0.cloudfront.net/fit/c/1600/1280/gradv/29/81/40/darken/50/blur/50/1*4ncz3hLxmL8E_bUh-0z62w.jpeg')"></div>
+<!--   <div class='blur' style="background-image: url('http://upload.wikimedia.org/wikipedia/commons/0/09/Mumbai_Train_Station.jpg')"></div> -->
+</div>
+<header>
+  <div>
+    <h1>
+      {{p.title}}
+    </h1>
+    <h2>
+      {{p.subTitle}}
+    </h2>
+    <p>
+      - {{p.user.username}}
+    </p>
+    <a href='/' title='Home'>Home</a>
+  </div>
+  <nav role='navigation'>
+    <ul>
+      <li>
+        <a class='active' href='#'>More Posts</a>
+      </li>
+      <li>
+        <a href='#'>Your List</a>
+      </li>
+      <li>
+        <a href='#'>Top 100</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <div class='container'>
+    <div>
+    <p>{{p.text}}</p>
+  </div>
+</div>
+</body>
+</html>

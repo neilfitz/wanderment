@@ -1,6 +1,6 @@
 /* line 11, ../scss/styles.scss */
 body {
-  font-family: 'Arial';
+  font-family: 'EB Garamond', serif;
   color: #555;
   padding: 20px;
   padding: 0;
@@ -13,6 +13,20 @@ body {
   font-size: 1.4em;
   /* Page-wrap styles.  */
 }
+
+header h1 {
+  font-family: 'Dancing Script', sans-serif;
+}
+
+header h2 {
+  font-family: 'EB Garamond', serif;
+  text-transform: uppercase; 
+}
+
+.white, .white a {
+  color: #fff;
+}
+
 .article {
   /*font-family: 'Liberation Serif';*/
   font-family: 'EB Garamond', serif;
@@ -44,6 +58,7 @@ a {
   background-size: cover;
   background-position: center center;
 }
+
 .blur {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -59,7 +74,7 @@ header {
 header > div {
   max-width: 600px;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 75px;
   height: 380px;
   text-align: center;
   color: White;
@@ -87,8 +102,9 @@ header p {
   font-size: 1.5em;
   margin-bottom: 0.7em;
  /* font-family: Times New Roman;*/
-  font-family: 'EB Garamond', serif;
-  text-transform: uppercase;
+  font-family: 'Dancing Script', serif;
+  text-transform: lowercase;
+  font-style: italic;
 }
 h1 {
   font-weight: 800;

@@ -33,10 +33,22 @@ class City(models.Model):
 	latitude = models.DecimalField(max_digits=9, decimal_places=6)
 	longitude = models.DecimalField(max_digits=9, decimal_places=6)
 
+	def __unicode__(self):
+		return self.name
+
 class Post(models.Model):
 	city = models.ForeignKey(City)
 	user = models.ForeignKey(User)
+	title = models.CharField(max_length=140)
+	subTitle = models.CharField(max_length=140)
 	text = models.TextField()
 	imgURLs = CSVListField()
 	soundURL = models.URLField(max_length=200)
+
+	# The first image is the title image
+	def getTitleImage(self):
+		return str(self.imgURLs.split(',')[0])
+
+	def __unicode__(self):
+		return self.title 
 
