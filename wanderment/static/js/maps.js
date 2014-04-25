@@ -61,11 +61,14 @@ function initialize() {
 
 	//add a listener to map for search events
 	document.getElementById("map").addEventListener("searchMap", function(e) {
-		console.info("data is: ", e.detail);
+		// console.info("data is: ", e.detail);
 		//create lat lon
 		var loc = new google.maps.LatLng(e.detail.location.lat, e.detail.location.lon,false);
 		console.info("LatLng: ",loc);
 		map.panTo(loc);
+		map.setZoom(7);
+
+		//TODO replace with a loop through current displayed markers
 		google.maps.event.trigger(marker, 'click', {latLng: loc});
 
 		google.maps.event.trigger(marker2, 'click', {latLng: loc});
