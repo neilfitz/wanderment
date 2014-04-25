@@ -52,6 +52,23 @@ function initialize() {
 		content: 'Hi!'
 	});
 
+	//check if infowindow is open
+	function isInfoWindowOpen(infoWindow){
+		var map = infoWindow.getMap();
+		return (map!==null && typeof map !== "undefined");
+	}
+
+	//ESCAPE TO CLOSE
+	$(document).keyup(function(e){
+		//esc
+		if (e.keyCode==27){
+			if(isInfoWindowOpen(popup)){
+				popup.close(); 
+				updateInfo(defaultInfo);
+			}
+		}
+	});
+
 	//range is a positive value
 	function makeBounds(loc, range){
 		var sw = new google.maps.LatLng(loc.lat()-range,loc.lng()-range);
@@ -66,8 +83,10 @@ function initialize() {
 		var loc = new google.maps.LatLng(e.detail.location.lat, e.detail.location.lon,false);
 		console.info("LatLng: ",loc);
 		map.panTo(loc);
-		map.setZoom(7);
+		map.setZoom(6);
 
+		popup.close();
+		updateInfo(defaultInfo);
 		//TODO replace with a loop through current displayed markers
 		google.maps.event.trigger(marker, 'click', {latLng: loc});
 
