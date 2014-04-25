@@ -33,10 +33,22 @@
 	padding: 0 10px;
 	font-size: 16pt;
 }
-#ui-autocomplete{
+/*change autocomplete look*/
+.ui-autocomplete{
 	background-color: #FFFFFF;
-	width: 200px;
+	border-radius:0px;
 }
+.ui-autocomplete .ui-menu-item a{
+	font-size: 16pt;
+	color:black;
+	font-family: 'EB Garamond', serif;
+	border-radius:0px;
+}
+.ui-autocomplete .ui-menu-item .ui-state-focus{
+	background-color: rgb(228,191,255);
+	border:none;
+}
+
 #search-submit{
 	display:none;
 }

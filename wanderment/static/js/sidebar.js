@@ -48,6 +48,10 @@ locData.mumbai = makeLatLon(18.975,72.825833);
 locData.boston = makeLatLon(42.3133,-71.0571);
 locData.doha = makeLatLon(25.28666,51.53333);
 locData.bangkok = makeLatLon(13.75,100.46666);
+locData.aberdeen = makeLatLon(57.9,-2.9);
+locData.paramaribo = makeLatLon(5.45,-55.15);
+
+var autoComplete = ["Mumbai", "Boston", "Doha", "Bangkok", "Aberdeen","Paramaribo"]
 
 $(document).ready(function(){
 	function searchMap(){
@@ -57,10 +61,11 @@ $(document).ready(function(){
 			var loc = locData[searchTerm.toLowerCase()]
 
 			//create searchMap event to "map"
-			var searchEvent = new CustomEvent("searchMap", {
+			var searchEvent = new CustomEvent("searchMap", 
+				{
 				detail: {
-								location : loc
-								}
+						location : loc
+						}
 				});
 			//dispatch event 
 			document.getElementById("map").dispatchEvent(searchEvent);
@@ -77,10 +82,11 @@ $(document).ready(function(){
 		return false;
 	});
 
-	// $("#search-field").autocomplete({
-	// 	source: Object.keys(locData),
-	// 	minLength: 0,
-	// 	_resizeMenu: function() { this.menu.element.outerWidth(200);},
-	// 	});
+	$("#search-field").autocomplete({
+		source: autoComplete,
+		minLength: 0,
+		// _resizeMenu: function() { this.menu.element.outerWidth(200);},
+		select: function( event, ui ){$("#search-field").val(ui.item.value); searchMap();}
+		});
 
 })
