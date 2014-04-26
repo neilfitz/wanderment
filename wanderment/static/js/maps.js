@@ -64,7 +64,7 @@ function initialize() {
 		if (e.keyCode==27){
 			if(isInfoWindowOpen(popup)){
 				popup.close(); 
-				updateInfo(defaultInfo);
+				resetInfo();
 			}
 		}
 	});
@@ -220,7 +220,7 @@ function initialize() {
 	});
 
 	google.maps.event.addListener(popup, 'closeclick', function() {
-		updateInfo(defaultInfo);
+		resetInfo();
 	});
 }
 

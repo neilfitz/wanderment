@@ -32,7 +32,10 @@ function updateInfo(data){
     $("#sidebar-heading").text(data.heading);
     $("#sidebar-info").html(genTableInfo(data.info));
 }
-
+function resetInfo(){
+	$("#sidebar-heading").text(defaultInfo.heading);
+    $("#sidebar-info").html(defaultInfo.info));
+}
 
 // var locData = Object();
 // locData.mumbai = makeLatLon(18.975,72.825833);
