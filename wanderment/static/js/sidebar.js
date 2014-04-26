@@ -34,7 +34,7 @@ function updateInfo(data){
 }
 function resetInfo(){
 	$("#sidebar-heading").text(defaultInfo.heading);
-    $("#sidebar-info").html(defaultInfo.info));
+    $("#sidebar-info").html(defaultInfo.info);
 }
 
 // var locData = Object();
