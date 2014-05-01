@@ -65,7 +65,7 @@ function initialize() {
 		if (e.keyCode==27){
 			if(isInfoWindowOpen(popup)){
 				popup.close(); 
-				updateInfo(defaultInfo);
+				resetInfo();
 			}
 		}
 	});
@@ -81,13 +81,12 @@ function initialize() {
 	document.getElementById("map").addEventListener("searchMap", function(e) {
 		// console.info("data is: ", e.detail);
 		//create lat lon
-		var loc = new google.maps.LatLng(e.detail.location.lat, e.detail.location.lon,false);
-		console.info("LatLng: ",loc);
+		var loc = new google.maps.LatLng(e.detail.latitude, e.detail.longitude,false);
 		map.panTo(loc);
 		map.setZoom(6);
 
 		popup.close();
-		updateInfo(defaultInfo);
+		updateInfo(e.detail.cityInfo);
 		//TODO replace with a loop through current displayed markers
 		google.maps.event.trigger(marker, 'click', {latLng: loc});
 
@@ -101,7 +100,7 @@ function initialize() {
 		var bounds = makeBounds(marker.position, 0.2);
 		//if in range of marker, zoom over
 		if(bounds.contains(e.latLng)){
-			updateInfo(sampleInfo);
+			// updateInfo(sampleInfo);
 
 			var popupContent = document.createElement('div');
 			popupContent.setAttribute('class', 'city_popup');
@@ -222,7 +221,7 @@ function initialize() {
 	});
 
 	google.maps.event.addListener(popup, 'closeclick', function() {
-		updateInfo(defaultInfo);
+		resetInfo();
 	});
 }
 

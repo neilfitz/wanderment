@@ -31,6 +31,27 @@ function slide() {
   }
 };
 
+//TODO not sure if this is the best method for the new post popup?
+//also it's not actually working...
+// Animate enter show editor div 
+var showOrHide_newPost = true; 
+function slideNewPost() {
+  if (showOrHide_newPost == true) {
+      showOrHide_newPost = false; 
+      ( "../../posts/templates/posts/create_post.html" ).animate({
+        left: 0,
+      }, 500, function() {
+        
+    });
+  } else {
+    showOrHide_newPost = true; 
+    ( "../../posts/templates/posts/create_post.html" ).animate({
+        left: 4000,
+      }, 500, function() {
+    });
+  }
+};
+
 
 $(document).ready(function() {
 

@@ -1,0 +1,985 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"im",
+				"imgURLs"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"show",
+				"showOrHide"
+			],
+			[
+				"arrow",
+				"arrows"
+			],
+			[
+				"player",
+				"playerColor"
+			],
+			[
+				"undo",
+				"undoArray"
+			],
+			[
+				"move",
+				"moveSuccess"
+			],
+			[
+				"play",
+				"playerColor"
+			],
+			[
+				"plae",
+				"playerDirection"
+			],
+			[
+				"add",
+				"addRemoved"
+			],
+			[
+				"get",
+				"getCheckerAt"
+			],
+			[
+				"pla",
+				"playerColor"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"fire",
+				"firstMoved"
+			],
+			[
+				"dis",
+				"disabled"
+			],
+			[
+				"first",
+				"firstMoved"
+			],
+			[
+				"toggle",
+				"toggleTurn"
+			],
+			[
+				"togg",
+				"toggleTurn"
+			],
+			[
+				"turn",
+				"turnDirection"
+			],
+			[
+				"drawCheck",
+				"drawCheckersOnBoard"
+			],
+			[
+				"ass",
+				"association_type"
+			],
+			[
+				"pro",
+				"properties"
+			],
+			[
+				"class",
+				"classAttrs"
+			],
+			[
+				"obj",
+				"objectClass"
+			],
+			[
+				"atr",
+				"attrType"
+			],
+			[
+				"attr",
+				"attrType"
+			],
+			[
+				"module",
+				"module_name"
+			],
+			[
+				"clas",
+				"class_name"
+			],
+			[
+				"mod",
+				"module_name"
+			],
+			[
+				"import",
+				"importlib"
+			],
+			[
+				"Peso",
+				"PersonModel"
+			],
+			[
+				"Person",
+				"PersonModel"
+			],
+			[
+				"claSS",
+				"classItem"
+			],
+			[
+				"b",
+				"BaseModel"
+			],
+			[
+				"F",
+				"ForeignKey"
+			],
+			[
+				"asso",
+				"association_object"
+			],
+			[
+				"pr",
+				"primary_key"
+			],
+			[
+				"app",
+				"app_params"
+			],
+			[
+				"curr",
+				"curr_perm"
+			],
+			[
+				"permis",
+				"permission_level"
+			],
+			[
+				"find",
+				"find_by_id"
+			],
+			[
+				"per",
+				"perm_type"
+			],
+			[
+				"perm",
+				"permission_type"
+			],
+			[
+				"user",
+				"user_list"
+			],
+			[
+				"frequency",
+				"frequency_dict"
+			],
+			[
+				"inst",
+				"isInstanceRunning"
+			],
+			[
+				"foren",
+				"forensic"
+			],
+			[
+				"start",
+				"start"
+			],
+			[
+				"create",
+				"createGrid"
+			],
+			[
+				"paint",
+				"paintAlive"
+			],
+			[
+				"init_cel",
+				"init_cells_str"
+			],
+			[
+				"str",
+				"str_celll"
+			],
+			[
+				"neigh",
+				"neighbor"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"init",
+				"init_cells"
+			],
+			[
+				"FF",
+				"FFFFFF"
+			],
+			[
+				"in",
+				"init"
+			],
+			[
+				"cell",
+				"cell"
+			],
+			[
+				"neighbor",
+				"neighbor_dict"
+			],
+			[
+				"neighbo",
+				"neighbor_dict"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "wanderment/posts/templates/posts/detail.html",
+			"settings":
+			{
+				"buffer_size": 2344,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wanderment/posts/urls.py",
+			"settings":
+			{
+				"buffer_size": 232,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wanderment/posts/views.py",
+			"settings":
+			{
+				"buffer_size": 750,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wanderment/posts/models.py",
+			"settings":
+			{
+				"buffer_size": 1549,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wanderment/templates/index.html",
+			"settings":
+			{
+				"buffer_size": 5490,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wanderment/static/css/style.css",
+			"settings":
+			{
+				"buffer_size": 3188,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wanderment/static/js/blur.js",
+			"settings":
+			{
+				"buffer_size": 1653,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": ">>> p.text = \"This is not a post\"\n>>> p.imgURLs = [\"http://www.holidaylist2014.com/wp-content/uploads/2014/03/mumbai_holidays2014.jpg\", \"http://upload.wikimedia.org/wikipedia/commons/6/66/Mumbai_skyline88907.jpg\", \"http://graphics8.nytimes.com/images/2013/09/12/world/asia/12-slum-mumbai-indiaInk/12-slum-mumbai-indiaInk-superJumbo.jpg\"]\n>>> p.soundURL = \"http://www.soundjay.com/ambient/boarding-accouncement-1.mp3\" \n\nMake time for the more subtle aspects of life. They won't jump out as much to you as your psets, but they are ultimately the things that matter the most.\nBe there for your friends. Everyone has good and bad times, and they need you to be with them, as much as you will need them someday. \nGo to office hours. And get other help. Even if you're never had to before. MIT is different from high school. \nBe yourself. There's no need to ape anyone, or compare yourself with all the \"genuises\" here. You're unique, and you're here for a reason. The admissions office makes no mistakes. \nFinally, remember why you're here. And stay true to that. If possible, give back to the world, and never settle for mediocrity. \n\n\nI've loved my experience at MIT, and sincerely thank everyone who's made this special. Most people don't know the impact their intellect, values and dedication have had on me. Thank you for inspiring me, I hope to be able to make you proud some day. ",
+			"settings":
+			{
+				"buffer_size": 1382,
+				"line_ending": "Unix",
+				"name": ">>> p.text = \"This is not a post\""
+			}
+		},
+		{
+			"file": "wanderment/static/css/post.css",
+			"settings":
+			{
+				"buffer_size": 300,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"sublime",
+				"SublimeLinter: Show Errors on Save"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib3",
+			"import urllib3,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib3.install_opener( urllib3.build_opener( urllib3.ProxyHandler()) ); by = urllib3.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"pip install urllib2",
+			"import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/db.sqlite3",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/venv/lib/python2.7/site-packages/dj_database_url-0.2.2-py2.7.egg-info/dependency_links.txt",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/userProfile.js",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/urls.py",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/static/js/blur.js",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/templates/index.html",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/static/css/main.css",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/static/css/sidebar.css",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/settings.py",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/posts/urls.py",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/posts/views.py",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/posts/models.py",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/posts/__init__.py",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/static/js/maps.js",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/templates/sample_post.html",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/static/css/style.css",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/static/js/sidebar.js",
+		"/Users/jesika/Dropbox/Spring2014/6.813/wanderment/wanderment/templates/editor.html",
+		"/Users/jesika/Downloads/ckeditor/index.html",
+		"/Users/jesika/Downloads/jesika-170.stdout",
+		"/Users/jesika/Dropbox/Spring2014/6.857/PSET2/strong_answers.txt",
+		"/Users/jesika/Dropbox/Spring2014/6.857/PSET2/moderate_answers.txt",
+		"/Users/jesika/Downloads/findmyhash_v1.1.2.py",
+		"/Users/jesika/Dropbox/Spring2014/6.857/PSET2/easy.txt",
+		"/Users/jesika/Dropbox/Spring2014/6.857/PSET2/easy_small.txt",
+		"/Users/jesika/Dropbox/Spring2014/6.857/PSET2/strong.txt",
+		"/Users/jesika/Dropbox/Spring2014/6.857/PSET2/moderate.txt",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/sample_models.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/BaseModel.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/Examples/PersonModel.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/IntegerField.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/BooleanField.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/parse_models.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/models.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/ForeignKey.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/__init__.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/Examples/__init__.py",
+		"/Users/jesika/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/CharField.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/DatetimeField.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/TimestampField.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/Examples/UserModel.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/Field.py",
+		"/Users/jesika/Dropbox/development/datahub/src/datahub/orm/python/src/DataHubModels/class ForeignKey():",
+		"/Users/jesika/Dropbox/Fall2013/Misc/interviews/asana_spiral.py",
+		"/Users/jesika/Dropbox/Fall2013/6.UAT/Emergence",
+		"/Users/jesika/Dropbox/Fall2013/6.170/Ido-Efrati_jharia_rlacey_proj3/README.md",
+		"/Volumes/KINGSTON/rankcentralitycode.py",
+		"/Users/jesika/Dropbox/Fall2013/Misc/sirf.txt",
+		"/Users/jesika/Downloads/lab6_script.py",
+		"/Users/jesika/Dropbox/Fall2013/6.UAT/IntuitionTalkTitle.txt",
+		"/Users/jesika/Dropbox/Fall2013/Misc/india_contacts.txt",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/controllers/welcome_controller.rb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/controllers/application_controller.rb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/config/routes.rb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/errors_caught/404.html",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/controllers/notes_controller.rb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/controllers/sessions_controller.rb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/notes/edit.html.erb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/controllers/users_controller.rb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/notes/index.html.erb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/assets/stylesheets/zzzz-custom.css.scss",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/notes/show.html.erb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/notes/destroy.html.erb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/errors_caught/editing.html",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/errors_caught/nonotes.html",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/users/new.html.erb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/assets/javascripts/notes.js",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/sessions/new.html.erb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/assets/javascripts/show.js.erb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/models/note.rb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/models/user_note_permission.rb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/notes/read.html.erb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/layouts/_header.html.erb",
+		"/Users/jesika/Downloads/jainp_proj3/app/assets/javascripts/Note.js",
+		"/Users/jesika/Downloads/jainp_proj3/app/controllers/notes_controller.rb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/assets/javascripts/notes.js.coffee",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/assets/javascripts/bootstrap.js",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/views/users/index.html.erb",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/assets/stylesheets/scaffolds.css.scss",
+		"/Users/jesika/Dropbox/Fall2013/Misc/looking_for_a_friend.txt",
+		"/Users/jesika/Dropbox/Fall2013/6.885/lab4/asciiclass/lab4/lab4.py",
+		"/Users/jesika/Dropbox/Fall2013/6.170/recitation_notes/notes1.txt",
+		"/Users/jesika/Dropbox/Fall2013/Misc/square_2.py",
+		"/Users/jesika/Dropbox/Fall2013/Misc/interviews/square_coding2.py",
+		"/Users/jesika/Dropbox/Fall2013/Misc/square_coding.py",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj2/app/assets/stylesheets/notes.css.scss",
+		"/Users/jesika/Dropbox/Fall2013/Misc/interviews/Pure Storage Programming Quiz.txt",
+		"/Users/jesika/Dropbox/Fall2013/6.885/lab4/asciiclass/lab4/lab4_new.py",
+		"/Users/jesika/Dropbox/Fall2013/6.885/lab4/asciiclass/lab4/lab4_corr.py",
+		"/Users/jesika/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj1/cell.js",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj1_2/design_decisions.txt",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj1_2/cell.js",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj1_2/life.css",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj1_2/test.html",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj1_2/board.js",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj1_2/drawing_functions.js",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj1_2/drawing.html",
+		"/Users/jesika/Downloads/code/drawing2.js",
+		"/Users/jesika/Dropbox/Fall2013/6.170/jesika_proj1/drawing_functions.js",
+		"/Users/jesika/Downloads/code/cell.js",
+		"/Users/jesika/Downloads/code/board.js",
+		"/Users/jesika/Dropbox/Fall2013/6.885/asciiclass/labs/lab2/step3.py",
+		"/Users/jesika/Dropbox/Fall2013/6.885/asciiclass/labs/lab2/answers.txt",
+		"/Users/jesika/Dropbox/Fall2013/6.170/R2/cats.html",
+		"/Users/jesika/Dropbox/Fall2013/6.170/R2/cat.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"center",
+			"h1",
+			" pkts / ms",
+			"[0-9]* pkts / ms",
+			" pkts / ms",
+			"[0-9]* pkts / ms",
+			"495",
+			"496",
+			" pkts / ms",
+			"[0-9]* pkts / ms",
+			"497",
+			"495",
+			" pkts / ms",
+			"[0-9]* pkts / ms",
+			" pkts / ms",
+			"497",
+			"[0-9]* pkts / ms",
+			"493",
+			" pkts / ms",
+			"[0-9]* pkts / ms",
+			"495",
+			" pkts / ms",
+			"[0-9]* pkts / ms",
+			"496",
+			" pkts / ms",
+			"[0-9]* pkts / ms",
+			" pkts / ms",
+			"494",
+			"493",
+			"[0-9]* pkts / ms",
+			" pkts / ms",
+			"[0-9]* pkts / ms",
+			" pkts / ms",
+			"[0-9]* pkts / ms",
+			"img",
+			"checkers",
+			"animate",
+			"draw",
+			"king",
+			"move",
+			"autoMove",
+			"disabled",
+			"game",
+			"undoArray",
+			"undos",
+			"unods",
+			"game",
+			"{\n",
+			"%;\n",
+			"toggleTurn",
+			"detail",
+			"getDetails",
+			"turn",
+			"rules",
+			"arrow",
+			"getChe",
+			"drawCheckersOnB",
+			"drawChec",
+			"moveT",
+			"getCh",
+			"checkerAt",
+			"checkerat",
+			"getcheck",
+			"checker",
+			"moveTo",
+			"[0-9]*. ",
+			"print",
+			"-=",
+			"isEditing",
+			"isEditin",
+			"note.isEdi",
+			" \n",
+			"json",
+			"note_params",
+			"note_parms",
+			"each",
+			"show",
+			"drop",
+			"collapse",
+			"tab",
+			"sepa",
+			"match_we",
+			", ",
+			"to live",
+			"tol ive",
+			"All n",
+			"gameLog",
+			"cells",
+			"DEBUG",
+			"performLiveStep",
+			"new_ce",
+			"new_cells",
+			"gameLog",
+			"live_cells",
+			"new_cell",
+			"drawLife",
+			"ToArra"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "wanderment/posts/templates/posts/detail.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2282,
+								2282
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wanderment/posts/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 232,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "wanderment/posts/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								261,
+								261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wanderment/posts/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1549,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1500,
+								1500
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "wanderment/templates/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5490,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								252
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1267.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wanderment/static/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3188,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1381,
+								1381
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 786.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "wanderment/static/js/blur.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1653,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1450,
+								1450
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 370.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1382,
+								1382
+							]
+						],
+						"settings":
+						{
+							"auto_name": ">>> p.text = \"This is not a post\"",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "wanderment/static/css/post.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								300,
+								44
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 25.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "wanderment.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"u",
+				"userProfile.js"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
