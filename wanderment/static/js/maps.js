@@ -8,6 +8,56 @@ function initialize() {
 	}
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	
+	var markers = {}
+
+
+	function makeMarker(name, lat, lng){
+
+		var marker = new google.maps.Marker({
+			position: new google.maps.LatLng(lat,lng),
+			icon: {
+				path:google.maps.SymbolPath.Circle,
+				scale: 6,
+				fillColor:"#FFFFFF",
+				fillOpacity: 1,
+				strokeColor: "#3D0099"
+			},
+			map: map,
+			title: name
+		});
+		return marker;
+		// markers[name] = marker;
+	}
+	function addMarkerListener(marker){
+		//TODO Neil, Listener for marker
+		google.maps.event.addListener(marker, 'click', function(e) {
+			// updateInfo(sampleInfo);
+
+			// var popupContent = document.createElement('div');
+			// popupContent.setAttribute('class', 'city_popup');
+			// var cityName = document.createElement('h2');
+			// cityName.innerHTML = 'Mumbai';
+			// var imagePost = document.createElement('input');
+			// imagePost.setAttribute('type', 'image');
+			// imagePost.setAttribute('src', 'http://www.goldentriangle-tour-india.com/blog/wp-content/uploads/2013/11/Mumbai_city.jpg');
+			// imagePost.setAttribute('height', '200');
+			// imagePost.setAttribute('width', '300');
+			// imagePost.setAttribute('class', 'glow')
+
+			// imagePost.addEventListener('click', function() {
+			// 	popup.close();
+			// 	slide();
+			// });
+
+			// popupContent.appendChild(cityName);
+			// popupContent.appendChild(imagePost);
+
+			// popup.setContent(popupContent);		
+			// popup.open(map, marker);	
+		}
+
+	}
+
 	// To add the marker to the map, use the 'map' property
 	var marker = new google.maps.Marker({
 		position: myLatlng,
@@ -87,10 +137,9 @@ function initialize() {
 		popup.close();
 		updateInfo(e.detail.cityInfo);
 		//TODO replace with a loop through current displayed markers
+		// google.maps.event.trigger(markers[e.detail.name], 'click',{latLng: loc})
 		google.maps.event.trigger(marker, 'click', {latLng: loc});
-
 		google.maps.event.trigger(marker2, 'click', {latLng: loc});
-
 		google.maps.event.trigger(marker3, 'click', {latLng: loc});
 	})
 
