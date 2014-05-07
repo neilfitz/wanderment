@@ -1,7 +1,11 @@
 function genTableInfo(dict){
 	var html = '<table class="data-table">';
 	for (var key in dict){
-		html = html+'<tr><td>'+key+':</td><td>'+dict[key]+'</td></tr>';
+	    if (key == "Bio") {
+		html = html+dict[key];
+	    } else {
+	    html = html+'<tr><td>'+key+':</td><td>'+dict[key]+'</td></tr>';
+	    }
 	}
 	html = html + '</table>';
 	return html;
@@ -25,7 +29,7 @@ dohaInfo.info = {"Country":"Qatar","Population": "1,312,947", "Type": "City", "L
 
 var userInfo = Object();
 userInfo.heading = "Dora";
-userInfo.info = "<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>";
+userInfo.info = {"Bio":"<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>"};
 
 //data has a heading (string) and info section (html)
 function updateInfo(data){
