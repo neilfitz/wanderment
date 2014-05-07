@@ -13,7 +13,7 @@ function genTableInfo(dict){
 
 var defaultInfo = Object();
 defaultInfo.heading = "Welcome to Wanderment!";
-defaultInfo.info = {"Bio":"<p>search for a city or click around the map to start wandering<p>"};
+defaultInfo.info = {};
 	
 var sampleInfo = Object();
 sampleInfo.heading = "Mumbai";
