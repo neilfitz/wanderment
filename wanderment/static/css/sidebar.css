@@ -87,19 +87,30 @@
 	font-size:20px;
 	font-family: Arial;
 	border-collapse: collapse;
+	width:260px;
 }
-.data-table td{
+.data-key,.data-value{
 	padding-top: .3em;
 	padding-bottom: .3em;
 	text-align:left;
-	/*text-align:left;*/
 	font-family: 'EB Garamond', serif;
 	text-transform: uppercase;
 }
-.data-table td:first-child{
+.data-key{
 	text-align: right;
 	width:100px;
 	padding-right:1em;
+}
+.userbio{
+	text-align:center;
+}
+.userpic{
+	width:120px;
+	margin-top:-10px;
+        margin-left:69px;
+	margin-bottom:0.5em;
+	padding:10px 10px 10px 10px;
+	background-color:#aa0000;
 }
 
 #bottom-section{
