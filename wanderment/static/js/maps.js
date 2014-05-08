@@ -137,52 +137,60 @@ function initialize() {
 
 			var popupContent = document.createElement('div');
 			popupContent.setAttribute('class', 'city_popup');
-			var cityName = document.createElement('h2');
+			var cityName = document.createElement('h3');
 			cityName.innerHTML = 'Bangkok';
 			
 			var imagePost = document.createElement('input');
 			imagePost.setAttribute('type', 'image');
 			imagePost.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
-			imagePost.setAttribute('height', '50');
-			imagePost.setAttribute('width', '75');
-			imagePost.setAttribute('class', 'glow');
-			var imagePost2 = document.createElement('input2');
-			imagePost2.setAttribute('type', 'image2');
+			imagePost.setAttribute('height', '97');
+			imagePost.setAttribute('width', '140');
+			imagePost.setAttribute('class', 'glow2');
+			var imagePost2 = document.createElement('input');
+			imagePost2.setAttribute('type', 'image');
 			imagePost2.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
-			imagePost2.setAttribute('height', '50');
-			imagePost2.setAttribute('width', '75');
+			imagePost2.setAttribute('height', '97');
+			imagePost2.setAttribute('width', '140');
 			imagePost2.setAttribute('class', 'glow2');
-			var imagePost3 = document.createElement('input3');
-			imagePost3.setAttribute('type', 'image3');
+			var imagePost3 = document.createElement('input');
+			imagePost3.setAttribute('type', 'image');
 			imagePost3.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
-			imagePost3.setAttribute('height', '50');
-			imagePost3.setAttribute('width', '75');
-			imagePost3.setAttribute('class', 'glow3');
-			var imagePost4 = document.createElement('input4');
-			imagePost4.setAttribute('type', 'image4');
+			imagePost3.setAttribute('height', '97');
+			imagePost3.setAttribute('width', '140');
+			imagePost3.setAttribute('class', 'glow2');
+			var imagePost4 = document.createElement('input');
+			imagePost4.setAttribute('type', 'image');
 			imagePost4.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
-			imagePost4.setAttribute('height', '50');
-			imagePost4.setAttribute('width', '75');
-			imagePost4.setAttribute('class', 'glow4');
-			
-			var seeMore = document.createElement('button');
-			seeMore.setAttribute('type', 'image5');
-			seeMore.setAttribute('src', '../imgs/view_more_posts.png');
-			seeMore.setAttribute('height', '380');
-			seeMore.setAttribute('width', '3000');
-			seeMore.setAttribute('class', 'glow5');
+			imagePost4.setAttribute('height', '97');
+			imagePost4.setAttribute('width', '140');
+			imagePost4.setAttribute('class', 'glow2');
+
+			var seeMore = document.createElement('p3');
+			seeMore.innerHTML = 'View More Posts';
+			seeMore.setAttribute('class', 'click-more');
 
 			imagePost.addEventListener('click', function() {
 				alert('Nothing here yet! Take a look at Mumbai.')
 			});
-			//seeMore.addEventListener('click', function() { alert('No more posts!') });
+			imagePost2.addEventListener('click', function() {
+				alert('Nothing here yet! Take a look at Mumbai.')
+			});
+			imagePost3.addEventListener('click', function() {
+				alert('Nothing here yet! Take a look at Mumbai.')
+			});
+			imagePost4.addEventListener('click', function() {
+				alert('Nothing here yet! Take a look at Mumbai.')
+			});
+			seeMore.addEventListener('click', function() { alert('No more posts!') });
 
 			popupContent.appendChild(cityName);
+			//popupContent.appendChild(seeMore);
 			popupContent.appendChild(imagePost);
 			popupContent.appendChild(imagePost2);
 			popupContent.appendChild(imagePost3);
 			popupContent.appendChild(imagePost4);
 			popupContent.appendChild(seeMore);
+
 
 			popup.setContent(popupContent);		
 			popup.open(map, marker2);
