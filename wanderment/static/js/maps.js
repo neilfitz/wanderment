@@ -143,10 +143,10 @@ function initialize() {
 			var imagePost = document.createElement('input');
 			imagePost.setAttribute('type', 'image');
 			imagePost.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
-			imagePost.setAttribute('height', '200');
-			imagePost.setAttribute('width', '300');
+			imagePost.setAttribute('height', '50');
+			imagePost.setAttribute('width', '75');
 			imagePost.setAttribute('class', 'glow');
-			/*var imagePost2 = document.createElement('input2');
+			var imagePost2 = document.createElement('input2');
 			imagePost2.setAttribute('type', 'image2');
 			imagePost2.setAttribute('src', 'http://www.interasia.com.au/wp-content/uploads/2012/11/bangkok-temple-of-the-dawn.jpg');
 			imagePost2.setAttribute('height', '50');
@@ -170,7 +170,7 @@ function initialize() {
 			seeMore.setAttribute('src', '../imgs/view_more_posts.png');
 			seeMore.setAttribute('height', '380');
 			seeMore.setAttribute('width', '3000');
-			seeMore.setAttribute('class', 'glow5');*/
+			seeMore.setAttribute('class', 'glow5');
 
 			imagePost.addEventListener('click', function() {
 				alert('Nothing here yet! Take a look at Mumbai.')
@@ -179,10 +179,10 @@ function initialize() {
 
 			popupContent.appendChild(cityName);
 			popupContent.appendChild(imagePost);
-			/*popupContent.appendChild(imagePost2);
+			popupContent.appendChild(imagePost2);
 			popupContent.appendChild(imagePost3);
 			popupContent.appendChild(imagePost4);
-			popupContent.appendChild(seeMore);*/
+			popupContent.appendChild(seeMore);
 
 			popup.setContent(popupContent);		
 			popup.open(map, marker2);
