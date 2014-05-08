@@ -1,15 +1,21 @@
 function genTableInfo(dict){
 	var html = '<table class="data-table">';
 	for (var key in dict){
-		html = html+'<tr><td>'+key+':</td><td>'+dict[key]+'</td></tr>';
+	    if (key == "Bio") {
+		html = html+'<tr><td><div class="userbio">'+dict[key]+'</div></td></tr>';
+	    } else if (key == "Pic") {
+		html = html+'<tr><td><img src="'+dict[key]+'" class="userpic"/></td></tr>';
+	    } else {
+		html = html+'<tr><td class="data-key">'+key+':</td><td class="data-value">'+dict[key]+'</td></tr>';
+	    }
 	}
 	html = html + '</table>';
 	return html;
 }
 
 var defaultInfo = Object();
-defaultInfo.heading = "Welcome to Wanderment!"
-defaultInfo.info = "<p>search for a city or click around the map to start wandering<p>"
+defaultInfo.heading = "Welcome to Wanderment!";
+defaultInfo.info = {};
 	
 var sampleInfo = Object();
 sampleInfo.heading = "Mumbai";
@@ -25,7 +31,7 @@ dohaInfo.info = {"Country":"Qatar","Population": "1,312,947", "Type": "City", "L
 
 var userInfo = Object();
 userInfo.heading = "Dora";
-userInfo.info = "<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>";
+userInfo.info = {"Pic":"../static/imgs/dora.jpg","Bio":"<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>"};
 
 //data has a heading (string) and info section (html)
 function updateInfo(data){
@@ -33,8 +39,14 @@ function updateInfo(data){
     $("#sidebar-info").html(genTableInfo(data.info));
 }
 function resetInfo(){
-	$("#sidebar-heading").text(defaultInfo.heading);
+    $("#sidebar-heading").text(defaultInfo.heading);
     $("#sidebar-info").html(defaultInfo.info);
+}
+
+//var sideButtons = Object();
+//sideButtons.info = <button onclick="window.location.href='/editor'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px; min-width:200px">Go To Editor</button> <button onclick="alert('No Saved Posts!')" class="emerald-flat-button" id="saved_posts" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Saved Posts</button> <button onclick="slideNewPost()" class="emerald-flat-button" id="create_post" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Create Post</button>;
+function afterLogin(){
+    $("#bottom-section").innerHTML = '<button onclick="window.location.href=\'/editor\'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px; min-width:200px">Go To Editor</button> <button onclick="alert(\'No Saved Posts!\')" class="emerald-flat-button" id="saved_posts" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Saved Posts</button> <button onclick="slideNewPost()" class="emerald-flat-button" id="create_post" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Create Post</button>';
 }
 
 // var locData = Object();

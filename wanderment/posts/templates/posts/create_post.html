@@ -39,24 +39,30 @@
 	<div class='blurImg'>
   		<div class='blur'></div>
 	</div>
+
 	<link rel="stylesheet" type="text/css" href="../../../static/css/main.css" />
+	<link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="../../../static/js/jquery-1.11.0.js"></script>
   	<script type="text/javascript" src="../../../static/js/jquery-ui-1.10.0.js"></script>
   	<script type="text/javascript" src="../../../static/js/blur.js"></script>
   	
 	<head>
 		<title>Wanderment: Create a Post</title>
+		<style>
+			body {background-color:hsl(250,50%,20%);}
+		</style>
 	</head>
+
 	<body>
 	<center>
-		<h1 style="font-family:EB Garamond;">Create a Post</h1>
+		<h1 style="font-family:'Dancing Script',serif;color:white;font-size:300%;">Create a Post</h1>
 		<form id="post_form" action="/posts/create_post/" method="post">
 			<input type="hidden" value="W5rDUXydf5CMstH8jS34KyQZITYK1sLi" name="csrfmiddlewaretoken">
-			<input id="id_title" type="text" placeholder="Title" name="title" size="80" maxlength="240">
+			<input id="id_title" type="text" style="font-size:16px" placeholder="Title" name="title" size="54" maxlength="240">
 			<br>
-			<input id="id_subTitle" type="text" placeholder="Subtitle" name="subTitle" size="80" maxlength="240">
+			<input id="id_subTitle" type="text" style="font-size:14px" placeholder="Subtitle" name="subTitle" size="62" maxlength="240">
 			<br>
-			<input id="id_user" type="text" placeholder="User Name" name="subTitle" size="80" maxlength="240">
+			<input id="id_user" type="text" style="font-size:14px" placeholder="User Name" name="user" size="62" maxlength="240">
 			<br>
 			<br>
 			<select id="id_city" name="city" style="width: 560px">
@@ -77,13 +83,13 @@
 			-->
 			
 		
-			<textarea id="id_text" rows="10" placeholder="Post text" name="text" cols="69"></textarea>
+			<textarea id="id_text" rows="10" style="font-family: 'Helvetica',Lucida Grande;font-size:14px;" placeholder="Post text" name="text" cols="75"></textarea>
 			
 			
 			<br>
 			
 			
-			<textarea id="id_imgURLs" rows="10" name="imgURLs" placeholder="ImgURLs" cols="69"></textarea>
+			<textarea id="id_imgURLs" rows="10" name="imgURLs" style="font-family: 'Helvetica',Lucida Grande;font-size:14px;" placeholder="ImgURLs" cols="75"></textarea>
 			<br>
 			<input id="id_soundURL" type="url" name="soundURL" placeholder="SoundURL" maxlength="200" size="80">
 			<br><br>
@@ -99,6 +105,7 @@
 		</form>
 	</center>
 	</body>
+
 </html>
 
 
