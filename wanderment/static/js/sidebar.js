@@ -2,9 +2,11 @@ function genTableInfo(dict){
 	var html = '<table class="data-table">';
 	for (var key in dict){
 	    if (key == "Bio") {
-		html = html+dict[key];
+		html = html+'<tr><td><div class="userbio">'+dict[key]+'</div></td></tr>';
+	    } else if (key == "Pic") {
+		html = html+'<tr><td><img src="'+dict[key]+'" class="userpic"/></td></tr>';
 	    } else {
-	    html = html+'<tr><td>'+key+':</td><td>'+dict[key]+'</td></tr>';
+		html = html+'<tr><td class="data-key">'+key+':</td><td class="data-value">'+dict[key]+'</td></tr>';
 	    }
 	}
 	html = html + '</table>';
@@ -29,7 +31,7 @@ dohaInfo.info = {"Country":"Qatar","Population": "1,312,947", "Type": "City", "L
 
 var userInfo = Object();
 userInfo.heading = "Dora";
-userInfo.info = {"Bio":"<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>"};
+userInfo.info = {"Pic":"../static/imgs/dora.jpg","Bio":"<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>"};
 
 //data has a heading (string) and info section (html)
 function updateInfo(data){
