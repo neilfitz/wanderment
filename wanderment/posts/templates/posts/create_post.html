@@ -56,8 +56,8 @@
 	<body>
 	<center>
 		<h1 style="font-family:'Dancing Script',serif;color:white;font-size:300%;">Create a Post</h1>
-		<form id="post_form" action="/posts/create_post/" method="post">
-			<input type="hidden" value="W5rDUXydf5CMstH8jS34KyQZITYK1sLi" name="csrfmiddlewaretoken">
+		<form id="post_form" action="/posts/create_post/" method="post">{% csrf_token %}
+			<!--<input type="hidden" value="W5rDUXydf5CMstH8jS34KyQZITYK1sLi" name="csrfmiddlewaretoken">-->
 			<input id="id_title" type="text" style="font-size:16px" placeholder="Title" name="title" size="54" maxlength="240">
 			<br>
 			<input id="id_subTitle" type="text" style="font-size:14px" placeholder="Subtitle" name="subTitle" size="62" maxlength="240">
