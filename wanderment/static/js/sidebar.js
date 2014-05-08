@@ -37,14 +37,14 @@ function updateInfo(data){
     $("#sidebar-info").html(genTableInfo(data.info));
 }
 function resetInfo(){
-	$("#sidebar-heading").text(defaultInfo.heading);
+    $("#sidebar-heading").text(defaultInfo.heading);
     $("#sidebar-info").html(defaultInfo.info);
 }
 
 //var sideButtons = Object();
 //sideButtons.info = <button onclick="window.location.href='/editor'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px; min-width:200px">Go To Editor</button> <button onclick="alert('No Saved Posts!')" class="emerald-flat-button" id="saved_posts" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Saved Posts</button> <button onclick="slideNewPost()" class="emerald-flat-button" id="create_post" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Create Post</button>;
 function afterLogin(){
-    $("#bottom-section").innerHTML(<button onclick="window.location.href='/editor'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px; min-width:200px">Go To Editor</button> <button onclick="alert('No Saved Posts!')" class="emerald-flat-button" id="saved_posts" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Saved Posts</button> <button onclick="slideNewPost()" class="emerald-flat-button" id="create_post" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Create Post</button>);
+    $("#bottom-section").innerHTML = '<button onclick="window.location.href=\'/editor\'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px; min-width:200px">Go To Editor</button> <button onclick="alert(\'No Saved Posts!\')" class="emerald-flat-button" id="saved_posts" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Saved Posts</button> <button onclick="slideNewPost()" class="emerald-flat-button" id="create_post" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Create Post</button>';
 }
 
 // var locData = Object();
