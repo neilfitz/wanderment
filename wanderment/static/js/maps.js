@@ -1,7 +1,7 @@
 function initialize() {
-	var myLatlng = new google.maps.LatLng(18.9750, 72.8258);
+    var myLatlng = new google.maps.LatLng(18.9750, 0);
 	var mapOptions = {
-	        zoom: 4,
+	        zoom: 2,
 		maxZoom: 12,
 		center: myLatlng,
 		mapTypeControl: false,
@@ -53,12 +53,19 @@ function initialize() {
 			imagePost.setAttribute('src', imgsrc);
 			imagePost.setAttribute('height', '200');
 			imagePost.setAttribute('width', '300');
-			imagePost.setAttribute('class', 'glow')
+			imagePost.setAttribute('class', 'glow seeMoreText');
 
 			imagePost.addEventListener('click', function() {
 				//TODO go to page with all posts!!!!!!!!
 				document.location.href = document.location.href.split("/")[0] + "posts/cities/"+id;
 			});
+			
+			/*imagePost.addEventListener('mouseover',function() {
+				('See More Posts').style.display = 'block';
+			});
+			imagePost.addEventListener('mouseout',function() {
+				('See More Posts').style.display = 'none';
+			});*/
 			popupContent.appendChild(cityName);
 			popupContent.appendChild(imagePost);
 			popup.setContent(popupContent);		
@@ -293,4 +300,3 @@ function initialize() {
 
 
 google.maps.event.addDomListener(window, 'load', initialize);
-

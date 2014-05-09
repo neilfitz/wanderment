@@ -11,12 +11,45 @@
         <title>Wanderment: View city posts</title>
         <style>
             body {background-color:hsl(250,50%,20%);}
+	    center > a {
+	        font-family: 'EB Garamond', serif;
+	        text-decoration: none;
+	        font-size: 18px;
+	        letter-spacing: 0.08em;
+	        color: rgba(255,255,255,0.85);
+	        line-height: 30px;
+	        padding: 7px 14px;
+	        border: 1px solid rgba(255,255,255,0.3);
+	        -webkit-border-radius: 2em;
+	        border-radius: 2em;
+	        -webkit-transition: all 0.3s ease;
+	        -moz-transition: all 0.3s ease;
+	        -o-transition: all 0.3s ease;
+	        -ms-transition: all 0.3s ease;
+	        transition: all 0.3s ease;
+	    }
+	    center > a:hover {
+	        background: #fff;
+	        color: Gray;
+	    }
+	    center > table > td > a:hover {
+	    	border:5px;
+			border-color: white;
+			box-shadow: white;
+	    }
         </style>
     </head>
 
     <body>
     <center>
       <h1 style="font-family:'Dancing Script',serif;color:white;font-size:300%; margin-top:50px;">Posts about {{c.name}}</h1>
+      <a href='/' title='Home'>Home</a>
+
+      {% if p|length == 0 %}
+      <h2 style="font-family: 'EB Garamond', serif; color:gray; margin-top: 150px;"> Whoops, no posts yet! Wanna be the first to create one? </h2>
+      <button onclick="window.location.href='/posts/create_post'" class="emerald-flat-button" id="create_post" style="margin-left: 45 px; margin-top: 10px; width:200px">Create Post</button>
+      {% endif%}
+      
       <table>
         {% for post in p %}
           

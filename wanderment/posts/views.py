@@ -67,3 +67,21 @@ def city_posts(request, city_id):
         'p' : p,
         })
     return HttpResponse(template.render(context))
+
+# def edit_post(request, post_id): 
+#     p = Post.objects.get(id=int(post_id))
+#     template = loader.get_template('posts/detail.html')
+#     context = RequestContext(request, {
+#         'p' : p,
+#     })
+#     return HttpResponse(template.render(context))
+
+def edit_post(request): 
+    # p = Post.objects.get(id=int(post_id))
+    # template = loader.get_template('posts/detail.html')
+    # context = RequestContext(request, {
+    #     'p' : p,
+    # })
+    # return HttpResponse(template.render(context))
+
+    return HttpResponse(RequestContext(request))
