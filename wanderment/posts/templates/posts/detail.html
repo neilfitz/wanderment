@@ -11,6 +11,7 @@
 <script type="text/javascript" src="/static/js/responsiveslides.min.js"></script> -->
 
 <script type="text/javascript" src="/static/js/blur.js"></script>
+<script type="text/javascript" src="/static/js/sidebar.js"></script>
 
 <!-- <script>
     $(function () {
@@ -84,7 +85,7 @@
     <p>
       - {{p.user.username}}
     </p>
-    <a href='/' title='Home'>Home</a>  <a href='/posts/cities/{{p.city.id}}' title='Back to City'>Back to City</a>
+    <a href='/' title='Home'>Home</a>   <a href='/posts/cities/{{p.city.id}}' title='Back to City'>Back to City</a>   <a href='/' title='More by User' onclick='displayUser({{p.user.username}})'>More by {{p.user.username}}</a>
   </div>
   <!-- <nav role='navigation'>
     <ul>
