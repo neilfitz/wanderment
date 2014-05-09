@@ -56,7 +56,11 @@ function displayUser(user){
 }
 
 if (window.location.hash) {
+    alert(window.location.hash);
     displayUser(window.location.hash);
+}
+else {
+    alert('No hash!');
 }
 
 //var sideButtons = Object();
