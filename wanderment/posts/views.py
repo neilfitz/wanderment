@@ -39,7 +39,7 @@ def create_post(request):
 
             # Now call the index() view.
             # The user will be shown the homepage.
-            return HttpResponseRedirect('/posts/%i/' % my_file.pk)
+            return HttpResponseRedirect('/')
         else:
             # The supplied form contained errors - just print them to the terminal.
             print form.errors
