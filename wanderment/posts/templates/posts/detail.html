@@ -2,10 +2,52 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/post.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/static/css/themes.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/responsiveslides.css" /> -->
 <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript" src="/static/js/jquery-1.11.0.js"></script>
+<!-- <script type="text/javascript" src="/static/js/jquery-1.11.0.js"></script> -->
+<script src="//code.jquery.com/jquery-latest.min.js"></script><!-- 
+<script type="text/javascript" src="/static/js/responsiveslides.min.js"></script> -->
+
 <script type="text/javascript" src="/static/js/blur.js"></script>
+
+<!-- <script>
+    $(function () {
+
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+        auto: false,
+        pager: true,
+        nav: true,
+        speed: 500,
+        maxwidth: 800,
+        namespace: "centered-btns"
+      });
+
+      // Slideshow 2
+      $("#slider2").responsiveSlides({
+        auto: false,
+        pager: true,
+        nav: true,
+        speed: 500,
+        maxwidth: 800,
+        namespace: "transparent-btns"
+      });
+
+      // Slideshow 3
+      $("#slider3").responsiveSlides({
+        auto: false,
+        pager: false,
+        nav: true,
+        speed: 500,
+        maxwidth: 800,
+        namespace: "large-btns"
+      });
+
+    });
+  </script> -->
+
 <div class='blurImg'>
   <!--   <div style="background-image: url('https://d262ilb51hltx0.cloudfront.net/fit/c/1600/1280/gradv/29/81/60/darken/25/1*4ncz3hLxmL8E_bUh-0z62w.jpeg')"></div> -->
   <div style="background-image: url('{{ p.getTitleImage }}')"></div>
@@ -49,10 +91,21 @@
 <body>
   <div class='container'>
     <div>
-    <p>{{p.text}}</p>
+      <p>{{p.text}}</p>
+    </div>
   </div>
-</div>
-<audio src="..
-/static/sounds/rain-02.mp3" controls></audio>
+
+<!--   <div class="rslides_container">
+      <ul class="rslides" id="slider1">
+        <li><img src="https://d262ilb51hltx0.cloudfront.net/fit/c/1600/1280/gradv/29/81/40/darken/50/blur/50/1*4ncz3hLxmL8E_bUh-0z62w.jpeg" alt=""></li>
+        <li><img src="https://d262ilb51hltx0.cloudfront.net/fit/c/1600/1280/gradv/29/81/40/darken/50/blur/50/1*4ncz3hLxmL8E_bUh-0z62w.jpeg" alt=""></li>
+        <li><img src="https://d262ilb51hltx0.cloudfront.net/fit/c/1600/1280/gradv/29/81/40/darken/50/blur/50/1*4ncz3hLxmL8E_bUh-0z62w.jpeg" alt=""></li>
+      </ul>
+  </div> -->
+<!-- <audio src="../static/sounds/rain-02.mp3" controls></audio> -->
+<!-- <embed height="50" width="100" src="../static/sounds/rain-02.mp3" loop="true" hidden="true" autostart="true" enablejavascript="true">  -->
+<!-- <embed src="http://soundjax.com/reddo/61046%5Eguitar.mp3" autostart="true" loop="infinite" hidden="true" width="2" height="0"></embed> -->
+<embed height="50" width="100" src="{{p.soundURL}}">
+
 </body>
 </html>

@@ -49,6 +49,10 @@ class Post(models.Model):
 	def getTitleImage(self):
 		return str(self.imgURLs.split(',')[0])
 
+	# All other images but the first image
+	def getCarouselImages(self):
+		return str(self.imgURLs.split(',')[1:])
+
 	def __unicode__(self):
 		return self.title 
 
