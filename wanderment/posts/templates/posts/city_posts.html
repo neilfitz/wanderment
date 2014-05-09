@@ -19,26 +19,29 @@
       <table>
         {% for post in p %}
           
-
               {% if forloop.counter0|divisibleby:"2" %}
               <tr>
               <td style="padding:30px;">
               <h2 style="font-family: 'EB Garamond', serif; color:gray;"> {{ post.title }}</h2>
               <!-- <div style="background-image: url('{{ post.getTitleImage }}')"></div> -->
-              <img src="{{post.getTitleImage}}" height="300" width="400" alt="">
+              <a href="/posts/{{forloop.counter}}">
+                <img src="{{post.getTitleImage}}" height="300" width="400" alt="">
+              </a>
               </td>
 
               {% else %}
               <td style="padding:30px;">
               <h2 style="font-family: 'EB Garamond', serif; color:gray;"> {{ post.title }}</h2>
               <!-- <div style="background-image: url('{{ post.getTitleImage }}')"></div> -->
-              <img src="{{post.getTitleImage}}" height="300" width="400" alt="">
+              <a href="/posts/{{forloop.counter}}">
+                <img src="{{post.getTitleImage}}" height="300" width="400" alt="">
+              </a>
               </td>
               </tr>
               {% endif %}
 
         {% endfor %}
-        
+
         {% if not p|length|divisibleby:"2" %}
         </tr> 
         {% endif %}
