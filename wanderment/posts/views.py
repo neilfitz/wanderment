@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, render_to_response
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.utils import timezone
 from django import forms
@@ -39,7 +39,7 @@ def create_post(request):
 
             # Now call the index() view.
             # The user will be shown the homepage.
-            return index(request)
+            return HttpResponseRedirect('/')
         else:
             # The supplied form contained errors - just print them to the terminal.
             print form.errors
@@ -61,13 +61,13 @@ def city_posts(request, city_id):
         })
     return HttpResponse(template.render(context))
 
-def edit_post(request, post_id): 
-    p = Post.objects.get(id=int(post_id))
-    template = loader.get_template('posts/detail.html')
-    context = RequestContext(request, {
-        'p' : p,
-    })
-    return HttpResponse(template.render(context))
+# def edit_post(request, post_id): 
+#     p = Post.objects.get(id=int(post_id))
+#     template = loader.get_template('posts/detail.html')
+#     context = RequestContext(request, {
+#         'p' : p,
+#     })
+#     return HttpResponse(template.render(context))
 
 def edit_post(request): 
     # p = Post.objects.get(id=int(post_id))

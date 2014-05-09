@@ -33,6 +33,10 @@ var userInfo = Object();
 userInfo.name = "Dora";
 userInfo.info = {"Pic":"../static/imgs/dora.jpg","Bio":"<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>"};
 
+var userInfo2 = Object();
+userInfo2.name = "Diego";
+userInfo2.info = {"Pic":"../static/imgs/dora.jpg","Bio":"<p>Diego enjoys having adventures with Dora.<p>"};
+
 //data has a heading (string) and info section (html)
 function updateInfo(cityData){
     $("#sidebar-heading").text(cityData.name);
@@ -41,6 +45,18 @@ function updateInfo(cityData){
 function resetInfo(){
     $("#sidebar-heading").text(defaultInfo.heading);
     $("#sidebar-info").html(defaultInfo.info);
+}
+function displayUser(user){
+    if (user == '#Dora') {
+	updateInfo(userInfo);
+    }
+    else {
+	updateInfo(userInfo2);
+    }
+}
+
+if (window.location.hash) {
+    displayUser(window.location.hash);
 }
 
 //var sideButtons = Object();

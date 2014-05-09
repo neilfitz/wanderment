@@ -10,12 +10,39 @@
         <title>Wanderment: View city posts</title>
         <style>
             body {background-color:hsl(250,50%,20%);}
+	    center > a {
+	        font-family: 'EB Garamond', serif;
+	        text-decoration: none;
+	        font-size: 18px;
+	        letter-spacing: 0.08em;
+	        color: rgba(255,255,255,0.85);
+	        line-height: 30px;
+	        padding: 7px 14px;
+	        border: 1px solid rgba(255,255,255,0.3);
+	        -webkit-border-radius: 2em;
+	        border-radius: 2em;
+	        -webkit-transition: all 0.3s ease;
+	        -moz-transition: all 0.3s ease;
+	        -o-transition: all 0.3s ease;
+	        -ms-transition: all 0.3s ease;
+	        transition: all 0.3s ease;
+	    }
+	    center > a:hover {
+	        background: #fff;
+	        color: Gray;
+	    }
+	    center > table > td > a:hover {
+	    	border:5px;
+			border-color: white;
+			box-shadow: white;
+	    }
         </style>
     </head>
 
     <body>
     <center>
       <h1 style="font-family:'Dancing Script',serif;color:white;font-size:300%; margin-top:50px;">Posts about {{c.name}}</h1>
+      <a href='/' title='Home'>Home</a>
       <table>
         {% for post in p %}
           
@@ -24,7 +51,7 @@
               <td style="padding:30px;">
               <h2 style="font-family: 'EB Garamond', serif; color:gray;"> {{ post.title }}</h2>
               <!-- <div style="background-image: url('{{ post.getTitleImage }}')"></div> -->
-              <a href="/posts/{{forloop.counter}}">
+              <a href="/posts/{{post.id}}">
                 <img src="{{post.getTitleImage}}" height="300" width="400" alt="">
               </a>
               </td>
@@ -33,7 +60,7 @@
               <td style="padding:30px;">
               <h2 style="font-family: 'EB Garamond', serif; color:gray;"> {{ post.title }}</h2>
               <!-- <div style="background-image: url('{{ post.getTitleImage }}')"></div> -->
-              <a href="/posts/{{forloop.counter}}">
+              <a href="/posts/{{post.id}}">
                 <img src="{{post.getTitleImage}}" height="300" width="400" alt="">
               </a>
               </td>
