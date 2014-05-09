@@ -48,8 +48,8 @@ class Post(models.Model):
 	title = models.CharField(max_length=140)
 	subTitle = models.CharField(max_length=140)
 	text = models.TextField()
-	imgURLs = CSVListField()
-	soundURL = models.URLField(max_length=200)
+	imgURLs = CSVListField(blank=True)
+	soundURL = models.URLField(max_length=200, blank=True)
 
 	# The first image is the title image
 	def getTitleImage(self):
