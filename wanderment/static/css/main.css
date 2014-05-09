@@ -239,10 +239,22 @@ p3 {
 	box-shadow: 0px 0px 20px hsl(250,50%,20%);
 }
 
+.glow2:hover{
+  border:2px;
+  border-color: #2ecc71;
+  box-shadow: 0px 0px 20px #2ecc71;
+}
+
 .seeMoreText .popup {
 	display: none;
 }
+
 .seeMoreText:hover .popup {
 	display: block;
 	content: "See More Posts";
+}
+
+.deleter {
+  position:absolute;
+  cursor: pointer;
 }

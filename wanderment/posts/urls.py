@@ -10,4 +10,6 @@ urlpatterns = patterns('',
     url(r'^cities/(?P<city_id>\d+)/$', views.city_posts, name='city_posts'),  
     # url(r'^edit_post/(?P<post_id>\d+)/$', views.edit_post, name='edit_post'),
     url(r'^edit_post/(?P<post_id>\d+)/$', views.edit_post, name='edit_post'),
+    url(r'^delete_post/$', views.delete_post, name='delete_post')
+    
 )

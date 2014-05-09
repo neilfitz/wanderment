@@ -72,7 +72,7 @@ class Post(models.Model):
 # 	c = City(name=tu[0], latitude=tu[1], longitude=tu[2], country=tu[3], population=tu[4], cityType=tu[5], language=tu[6], feel=tu[7], imgURL=tu[8])
 # 	c.save()
 
-# u = User(username="Dora")
+# u = User(username="Diego")
 # u.save()
 
 # postInfo = Post(city=City.objects.get(name="Mumbai"),
