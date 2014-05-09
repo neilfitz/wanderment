@@ -52,11 +52,10 @@ def create_post(request):
     return render_to_response('posts/create_post.html', {'form': form}, context)
 
 def delete_post(request):
-    context = RequestContext(request)
-    if request.method == 'POST':
-        post_id = request.POST.get('post_id')
-        Post.objects.filter(id=post_id).delete()
-    return HttpResponse(template.render(context))
+    print "first"
+    post_id = request.GET.get('post_id')
+    Post.objects.filter(id=post_id).delete()
+    return HttpResponse(RequestContext(request))
 
 def city_posts(request, city_id):
     c = City.objects.get(id=int(city_id))

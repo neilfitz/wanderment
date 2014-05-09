@@ -1,7 +1,6 @@
 <html>
 
     <link rel="stylesheet" type="text/css" href="../../../static/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="../../../static/css/cityposts.css"/> 
     <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../../../static/js/jquery-1.11.0.js"></script>
     <script type="text/javascript" src="../../../static/js/jquery-ui-1.10.0.js"></script>
@@ -56,19 +55,21 @@
               {% if forloop.counter0|divisibleby:"2" %}
               <tr>
               <td style="padding:30px;">
+                <div class="deleter" onclick="sendDelete({{ post.id }})" ><img width="20px" height = "20px" src="../../../static/imgs/delete.png"></div>
               <h2 style="font-family: 'EB Garamond', serif; color:gray;"> {{ post.title }}</h2>
               <!-- <div style="background-image: url('{{ post.getTitleImage }}')"></div> -->
               <a href="/posts/{{post.id}}">
-                <img src="{{post.getTitleImage}}" height="300" width="400" alt="">
+                <img class="glow2" src="{{post.getTitleImage}}" height="300" width="400" alt="">
               </a>
               </td>
 
               {% else %}
               <td style="padding:30px;">
+                <div class="deleter" onclick="sendDelete({{ post.id }})" ><img width="20px" height = "20px" src="../../../static/imgs/delete.png"></div>
               <h2 style="font-family: 'EB Garamond', serif; color:gray;"> {{ post.title }}</h2>
               <!-- <div style="background-image: url('{{ post.getTitleImage }}')"></div> -->
               <a href="/posts/{{post.id}}">
-                <img src="{{post.getTitleImage}}" height="300" width="400" alt="">
+                <img class="glow2" src="{{post.getTitleImage}}" height="300" width="400" alt="">
               </a>
               </td>
               </tr>

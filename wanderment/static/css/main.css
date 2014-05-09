@@ -253,3 +253,8 @@ p3 {
 	display: block;
 	content: "See More Posts";
 }
+
+.deleter {
+  position:absolute;
+  cursor: pointer;
+}
