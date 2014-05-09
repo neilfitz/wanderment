@@ -238,3 +238,11 @@ p3 {
 	border-color: hsl(250,50%,20%);
 	box-shadow: 0px 0px 20px hsl(250,50%,20%);
 }
+
+.seeMoreText .popup {
+	display: none;
+}
+.seeMoreText:hover .popup {
+	display: block;
+	content: "See More Posts";
+}
