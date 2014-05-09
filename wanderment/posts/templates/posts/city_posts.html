@@ -43,6 +43,12 @@
     <center>
       <h1 style="font-family:'Dancing Script',serif;color:white;font-size:300%; margin-top:50px;">Posts about {{c.name}}</h1>
       <a href='/' title='Home'>Home</a>
+
+      {% if p|length == 0 %}
+      <h2 style="font-family: 'EB Garamond', serif; color:gray; margin-top: 150px;"> Whoops, no posts yet! Wanna be the first to create one? </h2>
+      <button onclick="window.location.href='/posts/create_post'" class="emerald-flat-button" id="create_post" style="margin-left: 45 px; margin-top: 10px; width:200px">Create Post</button>
+      {% endif%}
+      
       <table>
         {% for post in p %}
           
