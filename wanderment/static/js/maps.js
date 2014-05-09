@@ -59,6 +59,13 @@ function initialize() {
 				//TODO go to page with all posts!!!!!!!!
 				document.location.href = document.location.href.split("/")[0] + "posts/cities/"+id;
 			});
+			
+			imagePost.addEventListener('mouseover',function() {
+				('See More Posts').style.display = 'block';
+			});
+			imagePost.addEventListener('mouseout',function() {
+				('See More Posts').style.display = 'none';
+			});
 			popupContent.appendChild(cityName);
 			popupContent.appendChild(imagePost);
 			popup.setContent(popupContent);		
