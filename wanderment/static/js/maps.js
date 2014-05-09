@@ -53,19 +53,20 @@ function initialize() {
 			imagePost.setAttribute('src', imgsrc);
 			imagePost.setAttribute('height', '200');
 			imagePost.setAttribute('width', '300');
-			imagePost.setAttribute('class', 'glow')
+			imagePost.setAttribute('class', 'glow');
+			imagePost.setAttribute('class', 'seeMoreText');
 
 			imagePost.addEventListener('click', function() {
 				//TODO go to page with all posts!!!!!!!!
 				document.location.href = document.location.href.split("/")[0] + "posts/cities/"+id;
 			});
 			
-			imagePost.addEventListener('mouseover',function() {
+			/*imagePost.addEventListener('mouseover',function() {
 				('See More Posts').style.display = 'block';
 			});
 			imagePost.addEventListener('mouseout',function() {
 				('See More Posts').style.display = 'none';
-			});
+			});*/
 			popupContent.appendChild(cityName);
 			popupContent.appendChild(imagePost);
 			popup.setContent(popupContent);		
