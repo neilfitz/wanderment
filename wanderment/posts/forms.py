@@ -14,3 +14,7 @@ class EditPostForm(forms.ModelForm):
         model = Post
         fields = ('title', 'subTitle', 'text', 'imgURLs', 'soundURL')
         exclude = ('user', 'city')
+
+        widgets = {
+            'text': forms.Textarea(attrs={'cols': 80, 'rows': 20}),
+        }
