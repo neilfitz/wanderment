@@ -238,3 +238,9 @@ p3 {
 	border-color: hsl(250,50%,20%);
 	box-shadow: 0px 0px 20px hsl(250,50%,20%);
 }
+
+.glow2:hover{
+  border:2px;
+  border-color: #2ecc71;
+  box-shadow: 0px 0px 20px #2ecc71;
+}
