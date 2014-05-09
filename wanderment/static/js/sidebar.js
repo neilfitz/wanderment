@@ -58,9 +58,6 @@ function displayUser(user){
 if (window.location.hash) {
     displayUser(window.location.hash);
 }
-else {
-    alert('No hash!');
-}
 
 //var sideButtons = Object();
 //sideButtons.info = <button onclick="window.location.href='/editor'" class="emerald-flat-button" id="show_editor" style="margin-left: 45 px; margin-top: 50px; min-width:200px">Go To Editor</button> <button onclick="alert('No Saved Posts!')" class="emerald-flat-button" id="saved_posts" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Saved Posts</button> <button onclick="slideNewPost()" class="emerald-flat-button" id="create_post" style="margin-left: 45 px; margin-top: 10px; min-width:200px">Create Post</button>;
