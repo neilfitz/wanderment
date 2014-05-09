@@ -47,7 +47,7 @@ function resetInfo(){
     $("#sidebar-info").html(defaultInfo.info);
 }
 function displayUser(user){
-    if (user == 'dora') {
+    if (user == '#Dora') {
 	updateInfo(userInfo);
     }
     else {
@@ -56,7 +56,6 @@ function displayUser(user){
 }
 
 if (window.location.hash) {
-    alert(window.location.hash);
     displayUser(window.location.hash);
 }
 else {
