@@ -79,9 +79,8 @@
         <center>
             <h1 style="font-family:'Dancing Script',serif;color:white;font-size:300%; margin-top:50px;">Create a Post</h1>
 	    <a href='/' title='Home'>Home</a>
-	    <br/>
             <form id="post_form" method="post" action="/posts/create_post/">
-
+	        <br/><br/>
                 <table>
                 {% csrf_token %}
                 {% for hidden in form.hidden_fields %}
