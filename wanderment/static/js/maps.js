@@ -53,8 +53,7 @@ function initialize() {
 			imagePost.setAttribute('src', imgsrc);
 			imagePost.setAttribute('height', '200');
 			imagePost.setAttribute('width', '300');
-			imagePost.setAttribute('class', 'glow');
-			imagePost.setAttribute('class', 'seeMoreText');
+			imagePost.setAttribute('class', 'glow seeMoreText');
 
 			imagePost.addEventListener('click', function() {
 				//TODO go to page with all posts!!!!!!!!
