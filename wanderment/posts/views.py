@@ -53,8 +53,10 @@ def create_post(request):
 
 def city_posts(request, city_id):
     c = City.objects.get(id=int(city_id))
+    p = Post.objects.filter(city_id=city_id)
     template = loader.get_template('posts/city_posts.html')
     context = RequestContext(request, {
         'c' : c,
+        'p' : p,
         })
     return HttpResponse(template.render(context))
