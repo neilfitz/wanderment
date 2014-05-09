@@ -15,28 +15,28 @@ function genTableInfo(dict){
 
 var defaultInfo = Object();
 defaultInfo.heading = "Welcome to Wanderment!";
-defaultInfo.info = {};
+defaultInfo.info = "<p>search for a city or click around the map to start wandering</p>";
 	
 var sampleInfo = Object();
-sampleInfo.heading = "Mumbai";
+sampleInfo.name = "Mumbai";
 sampleInfo.info = {"Country":"India","Population": "12,478,447", "Elevation": "14 m", "Type": "Big City", "Language": "Marathi, Hindi, English"};
 
 var bangkokInfo = Object();
-bangkokInfo.heading = "Bangkok";
+bangkokInfo.name = "Bangkok";
 bangkokInfo.info = {"Country":"Thailand","Population": "8,280,925", "Elevation": "1.5 m", "Type": "Capital", "Language": "Thai"}
 
 var dohaInfo = Object();
-dohaInfo.heading = "Doha";
+dohaInfo.name = "Doha";
 dohaInfo.info = {"Country":"Qatar","Population": "1,312,947", "Type": "City", "Language": "Arabic"}
 
 var userInfo = Object();
-userInfo.heading = "Dora";
+userInfo.name = "Dora";
 userInfo.info = {"Pic":"../static/imgs/dora.jpg","Bio":"<p>Dora enjoys hiking, learning new languages, and taking pictures.<p>"};
 
 //data has a heading (string) and info section (html)
-function updateInfo(data){
-    $("#sidebar-heading").text(data.heading);
-    $("#sidebar-info").html(genTableInfo(data.info));
+function updateInfo(cityData){
+    $("#sidebar-heading").text(cityData.name);
+    $("#sidebar-info").html(genTableInfo(cityData.info));
 }
 function resetInfo(){
     $("#sidebar-heading").text(defaultInfo.heading);
@@ -106,13 +106,14 @@ function searchMap(){
 
 //shortcut
 function cityInfo(name, callback){
-	$.get(document.URL + "get_city_info", {"name": name}, callback)
+	$.get(document.location.href.split("/")[0] + "get_city_info", {"name": name}, callback)
+
 }
 
 $(document).ready(function(){
 	
 	$("#search-field").autocomplete({
-		source: document.URL + "autocomplete_city",
+		source: document.location.href.split("/")[0] + "autocomplete_city",
 		minLength: 0,
 		// _resizeMenu: function() { this.menu.element.outerWidth(200);},
 		select: function( event, ui ){$("#search-field").val(ui.item.value); searchMap();}

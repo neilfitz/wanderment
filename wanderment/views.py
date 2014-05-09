@@ -1,4 +1,5 @@
 import json
+import collections
 from django.http import HttpResponse
 
 from wanderment.posts.models import Post, City
@@ -12,6 +13,11 @@ def autocomplete_city(request):
 	cities = City.objects.filter(name__istartswith=term)[:MAX_AUTOCOMPLETE]
 	names = [city.name for city in cities]
 	return HttpResponse(json.dumps(names))
+
+def get_marker_info(request):
+	cities = City.objects.all()
+	res = [{'name':city.name,'latitude':float(city.latitude),'longitude':float(city.longitude),'imgURL':city.imgURL,'info':makeInfo(city), 'id':city.id} for city in cities]
+	return HttpResponse(json.dumps(res), content_type='application/json')
 
 def get_city_info(request):
 	cityName = request.GET.get('name')
@@ -31,4 +37,4 @@ def get_city_info(request):
 #helper function for making "cityInfo" dictionary object given a City
 # TODO add in other params like country, language, etc in city model. Include in city info
 def makeInfo(city):
-	return {'heading': city.name, 'info':{'type': "Big City", 'Rating': "10 stars"}}
+	return {'name': city.name, 'info':collections.OrderedDict([('Country', city.country), ('Population', city.population), ('Type', city.cityType), ('Language', city.language), ('Feel', city.feel)])}
