@@ -51,7 +51,7 @@ def create_post(request):
     # Render the form with error messages (if any).
     return render_to_response('posts/create_post.html', {'form': form}, context)
 
-def city_posts(request):
+def city_posts(request, city_id):
     c = City.objects.get(id=int(city_id))
     template = loader.get_template('posts/city_posts.html')
     context = RequestContext(request, {
