@@ -1,0 +1,232 @@
+<!--
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wanderment: Create a Post</title>
+    </head>
+
+    <body>
+        <h1>Create a Post</h1>
+
+        <form id="post_form" method="post" action="/posts/create_post/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+                {{ field.label }}
+                {{ field.errors }}
+                {{ field.help_text}}
+                {{ field }}
+                <br><br>
+            {% endfor %}
+
+            <input type="submit" name="submit" value="Create Post" />
+        </form>
+    </body>
+
+</html>
+
+
+
+-->
+
+
+
+<html>
+    <div class='blurImg'>
+        <div class='blur'></div>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="../../../static/css/main.css" />
+    <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../../../static/js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="../../../static/js/jquery-ui-1.10.0.js"></script>
+    <script type="text/javascript" src="../../../static/js/blur.js"></script>
+    
+    <head>
+        <title>Wanderment: Create a Post</title>
+        <style>
+            body {background-color:hsl(250,50%,20%);}
+        </style>
+    </head>
+
+    <body>
+        <center>
+            <h1 style="font-family:'Dancing Script',serif;color:white;font-size:300%; margin-top:50px;">Edit a Post</h1>
+
+            <form id="post_form" method="post" action="/posts/edit_post/{{p.id}}/">
+              {% csrf_token %}
+                <table>
+<!-- 
+              <input id="id_city" type="hidden" style="font-size:14px" value="{{p.city_id}}" name="city_id" size="62" maxlength="240">
+
+              <input id="id_user" type="hidden" style="font-size:14px" value="{{p.user_id}}" name="user_id" size="62" maxlength="240">
+ -->
+
+
+                  <!--User--> 
+                   <!--  <tr style="margin-bottom:200px;height:50px;">
+                    <td style="font-family:'EB Garamond', serif; color:white;font-size:150%; margin-bottom:100px;">
+                    Username
+                    </td>
+                    <td>
+                    <select id="id_user">
+                    <option value="{{p.user}}">{{p.user}}</option>
+                    </select>
+                    </td>
+                    </tr> -->
+
+                    <!--City--> 
+                  <!--   <tr style="margin-bottom:200px;height:50px;">
+                    <td style="font-family:'EB Garamond', serif; color:white;font-size:150%; margin-bottom:100px;">
+                    City
+                    </td>
+                    <td>
+                    <select id="id_city">
+                    <option value="{{p.city}}">{{p.city}}</option>
+                    </select>
+                    </td>
+                    </tr> -->
+
+                    <!--Title--> 
+                    <tr style="margin-bottom:200px;height:50px;">
+                    <td style="font-family:'EB Garamond', serif; color:white;font-size:150%; margin-bottom:100px;">
+                    Title
+                    </td>
+                    <td>
+                    <input id="id_title" type="text" style="font-size:14px" value="{{p.title}}" name="title" size="62" maxlength="240">
+                    </td>
+                    </tr>
+
+                    <!--Subtitle--> 
+                    <tr style="margin-bottom:200px;height:50px;">
+                    <td style="font-family:'EB Garamond', serif; color:white;font-size:150%; margin-bottom:100px;">
+                    Subtitle
+                    </td>
+                    <td>
+                    <input id="id_subTitle" type="text" style="font-size:14px" value="{{p.subTitle}}" name="subTitle" size="62" maxlength="240">
+                    </td>
+                    </tr>
+
+                    <!--Text--> 
+                    <tr style="margin-bottom:200px;height:50px;">
+                    <td style="font-family:'EB Garamond', serif; color:white;font-size:150%; margin-bottom:100px;">
+                    Text
+                    </td>
+                    <td>
+                    <input id="id_text" type="text" style="font-size:14px" value="{{p.text}}" name="text" size="62" maxlength="240">
+                    </td>
+                    </tr>
+
+                    <!--ImgURLS--> 
+                    <tr style="margin-bottom:200px;height:50px;">
+                    <td style="font-family:'EB Garamond', serif; color:white;font-size:150%; margin-bottom:100px;">
+                    ImgURLs
+                    </td>
+                    <td>
+                    <input id="id_imgURLs" type="text" style="font-size:14px" value="{{p.imgURLs}}" name="imgURLs" size="62" maxlength="240">
+                    </td>
+                    </tr>
+
+                    <!--SoundURL--> 
+                    <tr style="margin-bottom:200px;height:50px;">
+                    <td style="font-family:'EB Garamond', serif; color:white;font-size:150%; margin-bottom:100px;">
+                    soundURL
+                    </td>
+                    <td>
+                    <input id="id_soundURL" type="text" style="font-size:14px" value="{{p.soundURL}}" name="soundURL" size="62" maxlength="240">
+                    </td>
+                    </tr>
+
+<!--                     <td style="font-family:'EB Garamond', serif; color:#F88379; font-size:100%;">
+                    </td> -->
+
+                </table>
+
+                <input type="submit" name="submit" value="Save Post" class="create-post-button"/>
+            </form>
+        </center>
+    </body>
+
+</html>
+
+
+<!-- <html>
+  <div class='blurImg'>
+      <div class='blur'></div>
+  </div>
+
+  <link rel="stylesheet" type="text/css" href="../../../static/css/main.css" />
+  <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../../../static/js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="../../../static/js/jquery-ui-1.10.0.js"></script>
+    <script type="text/javascript" src="../../../static/js/blur.js"></script>
+    
+  <head>
+    <title>Wanderment: Create a Post</title>
+    <style>
+      body {background-color:hsl(250,50%,20%);}
+    </style>
+  </head>
+
+  <body>
+  <center>
+    <h1 style="font-family:'Dancing Script',serif;color:white;font-size:300%;">Create a Post</h1>
+    <form id="post_form" action="/posts/create_post/" method="post">{% csrf_token %} -->
+      <!--<input type="hidden" value="W5rDUXydf5CMstH8jS34KyQZITYK1sLi" name="csrfmiddlewaretoken">-->
+      <!-- <input id="id_title" type="text" style="font-size:16px" placeholder="Title" name="title" size="54" maxlength="240">
+      <br>
+      <input id="id_subTitle" type="text" style="font-size:14px" placeholder="Subtitle" name="subTitle" size="62" maxlength="240">
+      <br>
+      <input id="id_user" type="text" style="font-size:14px" placeholder="User Name" name="user" size="62" maxlength="240">
+      <br>
+      <br>
+      <select id="id_city" name="city" style="width: 560px">
+        <option selected="selected" value="">Select City</option>
+        <option value="1">Mumbai</option>
+        <option value="2">Boston</option>
+        <option value="3">Doha</option>
+        <option value="4">Bangkok</option>
+      </select>
+      <br> -->
+      <!--
+      <select id="id_user" name="user">
+        <option selected="selected" value="">Select User</option>
+        <option value="1">jesika</option>
+      </select>
+      <br>
+      <br>
+      -->
+      
+    
+      <!-- <textarea id="id_text" rows="10" style="font-family: 'Helvetica',Lucida Grande;font-size:14px;" placeholder="Post text" name="text" cols="75"></textarea>
+      
+      
+      <br>
+      
+      
+      <textarea id="id_imgURLs" rows="10" name="imgURLs" style="font-family: 'Helvetica',Lucida Grande;font-size:14px;" placeholder="ImgURLs" cols="75"></textarea>
+      <br>
+      <input id="id_soundURL" type="url" name="soundURL" placeholder="SoundURL" maxlength="200" size="80">
+      <br><br>
+      
+      <button type="submit" value="Create Post" name="submit" class="create-post-button">Create Post</button>
+      
+      <button type="submit" value="Save Post" name="save" class="save-post-button">Save Post</button>
+      
+      <button type="submit" value="Back Post" name="back" class="save-post-button">Go Back</button>
+      
+      
+      
+    </form>
+  </center>
+  </body>
+
+</html> -->
+
+
+
