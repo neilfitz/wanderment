@@ -7,5 +7,7 @@ urlpatterns = patterns('',
     url(r'^(?P<post_id>\d+)/$', views.detail, name='detail'),
     url(r'.*\.js$', views.java_script),
     url(r'^create_post/$', views.create_post, name='create_post'), 
-    url(r'^cities/(?P<city_id>\d+)/$', views.city_posts, name='city_posts')
+    url(r'^cities/(?P<city_id>\d+)/$', views.city_posts, name='city_posts'),  
+    # url(r'^edit_post/(?P<post_id>\d+)/$', views.edit_post, name='edit_post'),
+    url(r'^edit_post/$', views.edit_post, name='edit_post'),
 )
