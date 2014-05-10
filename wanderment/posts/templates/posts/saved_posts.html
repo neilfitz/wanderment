@@ -34,6 +34,27 @@
   				-webkit-box-shadow: none;
  				box-shadow: none;
 			}
+			center > a {
+	        font-family: 'EB Garamond', serif;
+	        text-decoration: none;
+	        font-size: 18px;
+	        letter-spacing: 0.08em;
+	        color: rgba(255,255,255,0.85);
+	        line-height: 30px;
+	        padding: 7px 14px;
+	        border: 1px solid rgba(255,255,255,0.3);
+	        -webkit-border-radius: 2em;
+	        border-radius: 2em;
+	        -webkit-transition: all 0.3s ease;
+	        -moz-transition: all 0.3s ease;
+	        -o-transition: all 0.3s ease;
+	        -ms-transition: all 0.3s ease;
+	        transition: all 0.3s ease;
+	    }
+	    center > a:hover {
+	        background: #fff;
+	        color: Gray;
+	    }
 		</style>
 	</head>
 
@@ -42,8 +63,10 @@
 	<center>
 		<h1 style="font-family:'Dancing Script',serif;color:white;font-size:300%;">Saved Posts</h1>
 		
-		<button type="submit" value="Save Post" name="save" class="save-post-button">Home</button>
-		<button type="submit" value="Save Post" name="save" class="save-post-button">New Post</button>
+		<!--<button type="submit" value="Save Post" name="save" class="save-post-button">Home</button>
+		<button onclick="window.location.href='/posts/create_post'" type="submit" value="Save Post" name="save" class="save-post-button">New Post</button>-->
+		<a href='/' title='Home'>Home</a>
+		<a href='http://http://wanderment.herokuapp.com/posts/create_post' title='Home'>New Post</a>
 		<br><br>
 		
 		<div class="sp" onclick="window.location.href='/posts/create_post'">
